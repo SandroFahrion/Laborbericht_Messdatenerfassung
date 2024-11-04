@@ -275,110 +275,100 @@ Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemess
 	\caption{Nachmessung der Widerstände}
 \end{table}
 
+\newpage
 \section{Versuch 4: Widerstandsmessung mittels Vierdrahtmethode}
 \subsection{Zielsetzung}
-Es soll der (sehr niederohmige) Übergangswiderstand eines Kabels inclusive seiner Steckverbinder
-mittels der Vierdrahtmethode gemessen werden.
+Es soll der (sehr niederohmige) Übergangswiderstand eines Kabels inklusive seiner Steckverbinder
+mittels der Vierdrahtmethode gemessen werden. Der Fokus liegt darauf, möglichst Präzise den Widerstand des gesamten Kabels zu ermitteln, ohne die Werte mit der Messmethode zu verfälschen.
 
 \subsection{Bauteile und Messgeräte}
 \begin{itemize}
-\item Netzgerät (NEP-8323)
+\item Labornetzgerät (NEP-8323)
 \item Fluke 87 V True RMS Multimeter
-\item Keysight Oszilloskop (DSOX1102A)
-\item Bananenkabel (mehrere: rot, blau, schwarz)
-\item Sicherheits-Klemmprüfspitze (2 Stück)
-\item Oszilloskop BNC Tastkopf mit Messeklemme
-\item Steckkabel (mehrere: im Idealfall verschiedene Farben)
-\item Steckbrett\\
-\end{itemize}
-
-
-\begin{itemize}
-\item A/D Converter - ADC080x
-\item 10 Segment LED-Bar - OSX10201-B
-\newpage
-\item Kondensatoren: 
-	\begin{itemize}
-	\item 10 µF "Tantalum"
-	\item 0,1 µF (2 Stück)
-	\item 150 pF
-	\end{itemize}
-\item Widerstände: 
-	\begin{itemize}
-	\item 1k$\Omega$
-	\item 10k$\Omega$
-	\item 8 x 1 k$\Omega$ Widerstandsnetzwerk
-	\end{itemize}
+\item Bananenkabel 2 Stück (Messobjekt und Messkabel)
 \end{itemize}
 
 \subsection{Messkonzept}
-...
+Das Messkonzept basiert auf der Nutzung der Vierdrahtmethode. Sie kann hohe Genauigkeit erzielen, was bei derart kleinen Widerständen, wie der eines Kabels, sehr von Vorteil ist. Im Detail wird der Messaufbau so realisiert, dass zwei separate Strom- und Spannungspfade verwendet werden. Dadurch, dass über die Messleitung kein Strom fließt, fällt dadurch dort nur sehr wenig Spannung ab und sie verfälscht so nicht den Widerstand.\\
+\noindent Ein Multimeter hingegen würde den Messtrom über die Messleitung leiten und die dabei entstehenden Leitungswiderstände mitmessen. Diese parasitären Widerstände führen zu einer Verfälschung des Messergebnisses. \\\\
+\noindent  {\bfseries Netzteil Einstellungen:\par}
+\noindent Am Netzteil leuchtet die Anzeige für C.C (= Constant Current), was bedeutet, dass sich das Gerät im Konstantstrom Modus befindet und über Spannungsanpassungen den Strom konstant hält. Die Strombegrenzung in diesem Modus hat verschiedene Einflüsse:
+\begin{itemize}
+\item Zu niedrig: Spannungsabfall zu klein, um vom Messgerät präzise gemssen zu werden. Höhere Ströme erzeugen einen größeren Spannungsabfall, der leichter und genauer zu messen ist, insbesondere bei niederohmigen Widerständen.
+\item Zu hoch: Messtrom erwärmt das Objekt, wodurch der Widerstand steigt und das Ergebnis verfälscht wird.
+\item Zu hoch: Überlastung des Netzerätes, Abschaltung\\
+\end{itemize}
+\newpage
+\noindent  {\bfseries Die Grenzen der Strombegrenzung:\par}
+\begin{itemize}
+\item Seitens des Netzgeräts: Das Netzteil verfügt über eine maximale Stromausgabe von 3,5 A.
+\item Seitens der Anwendung: Die genauen Spezifikationen des Kabels sind unbekannt. Typischerweise können Bananenkabel diesen Durchmessers mit etwa 30 A belastet werden. 
+\item Bei anderen Anwendungen: 
+	\begin{itemize}
+	\item Bauteilschutz: In Anwendungen, die Halbleiterbauteilen oder andere empfindlichen Bauteile beinhalten, darf der Strom bestimmte Bauteilgrenzen nicht überschreiten, um Zerstörung oder Funktionsbeeinträchtigungen zu verhindern.
+	\item Effizienz: Ein zu hoher Strom führt generell zu Energieverlusten.\\
+	\end{itemize}
+\end{itemize}
+\noindent  {\bfseries Aufbau der Messchaltung:\par}
+\noindent Um den gesamten Widerstand des Kabels inklusiver seiner Steckverbindungen, wie er bei reellen Nutzungssituationen vorkommt, zu ermitteln, muss die Reihenfolge der Steckverbindungen beachtet werden. 
 
 \begin{figure}[H]
     \centering
-   % \includegraphics[]{}
-\caption{...}
+    \includegraphics[width=1\textwidth]{../Quellen/Labor2/Fotos/IMG_3983.jpeg}
+\caption{Teil der Steckverbindung nicht berücksichtigt}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../Quellen/Labor2/Fotos/IMG_3982.jpeg}
+\caption{Messung über gesamtes Objekt inkl. der ganzen Steckverbindungen}
+\end{figure}
 
 \subsection{Messergebnisse}
-...
+Um den Widerstand des blauen Kabels zu berechnen, verwenden wir die Differenz der Spannungswerte zwischen dem Netzteil und dem Digitalmultimeter.\\\\
+   - Spannung am Netzteil: \( U_{\text{Netzteil}} = 0,035 \, \text{V} \) \\
+   - Spannung am DMM: \( U_{\text{DMM}} = 0,030 \, \text{V} \) \\
+   - Strom durch das Kabel: \( I = 1,000 \, \text{A} \) \\\\
+Spannungsabfall über das Kabel:
+   \[
+   \Delta U = U_{\text{Netzteil}} - U_{\text{DMM}} = 0,035 \, \text{V} - 0,030 \, \text{V} = 0,005 \, \text{V}
+   \]\\
+Berechnung des Widerstands:
+   \[
+   R = \frac{\Delta U}{I} = \frac{0,005 \, \text{V}}{1,000 \, \text{A}} = 0,005 \, \Omega
+   \]
 
-
+\newpage
 \section{Versuch 5: Statistik}
 \subsection{Zielsetzung}
-Bestimmung einer gemessenen Zufallsverteilung und ihrer Eigenschaften (Momente). Hierbei stellt
+Aufgabenstellung: Bestimmung einer gemessenen Zufallsverteilung und ihrer Eigenschaften (Momente). Hierbei stellt
 das vorgegebene Los von Widerständen eine willkürlich entnommene Stichprobe einer vom
-Hersteller erzeugten Grundgesamtheit dar.
+Hersteller erzeugten Grundgesamtheit dar.\\
+\noindent Die Eigenschaften der gemessenen Zufallsverteilung zu bestimmen, insbesondere den Mittelwert und die empirische Standardabweichung. Diese Messung ermöglicht es, die Verteilung der Werte und die Toleranzen der Bauteile zu bewerten sowie zu untersuchen, inwieweit die gemessenen Ergebnisse mit den Herstellerangaben übereinstimmen.
 
 
 \subsection{Bauteile und Messgeräte}
 \begin{itemize}
-\item Netzgerät (NEP-8323)
 \item Fluke 87 V True RMS Multimeter
-\item Keysight Oszilloskop (DSOX1102A)
-\item Bananenkabel (mehrere: rot, blau, schwarz)
-\item Sicherheits-Klemmprüfspitze (2 Stück)
-\item Oszilloskop BNC Tastkopf mit Messeklemme
-\item Steckkabel (mehrere: im Idealfall verschiedene Farben)
-\item Steckbrett\\
-\end{itemize}
-
-
-\begin{itemize}
-\item A/D Converter - ADC080x
-\item 10 Segment LED-Bar - OSX10201-B
-\newpage
-\item Kondensatoren: 
-	\begin{itemize}
-	\item 10 µF "Tantalum"
-	\item 0,1 µF (2 Stück)
-	\item 150 pF
-	\end{itemize}
-\item Widerstände: 
-	\begin{itemize}
-	\item 1k$\Omega$
-	\item 10k$\Omega$
-	\item 8 x 1 k$\Omega$ Widerstandsnetzwerk
-	\end{itemize}
+\item Widerstandsgurt mit 25 Widerständen
 \end{itemize}
 
 \subsection{Messkonzept}
-...
+Am Fluke Multimeter wird die Widerstandsmessung aktiviert. Es ermöglicht die Messung einzelner Widerstände mithilfe von Klemmen, die ans Multimeter angeschlossen werden. Mit dem Widerstand wird ein geschlossener Stromkreis gebildet, in dem das Multimeter den Widerstand mithilfe eines kleinen Messtroms bestimmt.\\
+\noindent Bei dieser Messung können die parasitären Widerstände der Kabel vernachlässigt werden, da sie im Vergleich zu den zu messenden Widerstandsbauteilen verschwindend gering sind.
 
 \begin{figure}[H]
     \centering
-    %\includegraphics[]{}
-\caption{...}
+    \includegraphics[width=0.85\textwidth]{../Quellen/Labor2/Fotos/IMG_4011.jpeg}
+\caption{Messschaltung}
 \end{figure}
-
 
 \subsection{Messergebnisse}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Widerstand & Wert in k$\Omega$ & Widerstand & Wert in kOhm \\
+		Widerstand Nr. & Wert in kOhm & Widerstand Nr. & Wert in kOhm \\
 		\hline
 		1 & 1.183 & 14 & 1.183 \\
 		2 & 1.181 & 15 & 1.180 \\
@@ -395,8 +385,134 @@ Hersteller erzeugten Grundgesamtheit dar.
 		13 & 1.179 & - & - \\
 		\hline
 	\end{tabular}
-	\caption{...}
+	\caption{Einzelne Messungen}
 \end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{../Quellen/Labor2/Histogramm-Widerstände.png}
+\caption{Histogramm}
+\end{figure}
+
+Der Mittelwert \( \bar{x} \) wird berechnet als:
+\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]
+\[
+\bar{x} = \frac{29.582}{25} = 1.1833 \, \text{k}\Omega
+\]
+
+Die empirische Standardabweichung \( s \) wird berechnet als:
+\[
+s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+\]
+
+\textbf{Berechnung der Abweichungen:}
+\[
+x_i - \bar{x} \quad \text{für jeden Messwert}:
+\]
+Beispiele: 
+\[
+1.183 - 1.1833 = -0.0003, \quad 1.181 - 1.1833 = -0.0023, \quad \dots
+\]
+
+\textbf{Quadratische Abweichungen:}
+\[
+(x_i - \bar{x})^2 \quad \text{für jeden Messwert}:
+\]
+Beispiele:
+\[
+(-0.0003)^2 = 9 \times 10^{-8}, \quad (-0.0023)^2 = 5.29 \times 10^{-6}, \quad \dots
+\]
+
+\textbf{Summe der quadratischen Abweichungen:}
+\[
+\sum_{i=1}^{n} (x_i - \bar{x})^2 = 0.000192
+\]
+
+\textbf{Einsetzen in die Formel:}
+\[
+s = \sqrt{\frac{0.000192}{25 - 1}} = \sqrt{\frac{0.000192}{24}} = \sqrt{0.000008} = 0.0028 \, \text{k}\Omega
+\]
+\section*{Vergleich der invertierenden und nicht-invertierenden Grundschaltung eines Operationsverstärkers}
+
+\subsection*{1. Allgemeine Spannungsverstärkung}
+\textbf{Invertierende Schaltung:}
+\[
+A_V = -\frac{R_f}{R_{in}}
+\]
+wobei:
+\begin{itemize}
+    \item \( R_f \) der Gegenkopplungswiderstand ist
+    \item \( R_{in} \) der Eingangswiderstand ist
+\end{itemize}
+
+\textbf{Nicht-invertierende Schaltung:}
+\[
+A_V = 1 + \frac{R_f}{R_{in}}
+\]
+wobei:
+\begin{itemize}
+    \item \( R_f \) der Gegenkopplungswiderstand ist
+    \item \( R_{in} \) der Widerstand zwischen Masse und dem invertierenden Eingang des Operationsverstärkers
+\end{itemize}
+
+\subsection*{2. Relative Verstärkungsänderung}
+Angenommen, der Gegenkopplungswiderstand \( R_f \) wird durch einen Wert \( R_f + \Delta R_f \) ersetzt, wobei \( \Delta R_f \) die Abweichung aufgrund der Toleranz ist.
+
+\textbf{Invertierende Schaltung:}
+\[
+A_V' = -\frac{R_f + \Delta R_f}{R_{in}}
+\]
+Die relative Verstärkungsänderung \( \frac{\Delta A_V}{A_V} \) ist:
+\[
+\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( -\frac{R_f + \Delta R_f}{R_{in}} \right) - \left( -\frac{R_f}{R_{in}} \right)}{-\frac{R_f}{R_{in}}}
+\]
+Vereinfachung:
+\[
+\frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f}
+\]
+
+\textbf{Nicht-invertierende Schaltung:}
+\[
+A_V' = 1 + \frac{R_f + \Delta R_f}{R_{in}}
+\]
+Die relative Verstärkungsänderung \( \frac{\Delta A_V}{A_V} \) ist:
+\[
+\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( 1 + \frac{R_f + \Delta R_f}{R_{in}} \right) - \left( 1 + \frac{R_f}{R_{in}} \right)}{1 + \frac{R_f}{R_{in}}}
+\]
+Vereinfachung:
+\[
+\frac{\Delta A_V}{A_V} = \frac{\frac{\Delta R_f}{R_{in}}}{1 + \frac{R_f}{R_{in}}}
+\]
+
+\subsection*{3. Empfindlichkeit der Schaltungen}
+Die \textbf{invertierende Schaltung} ist proportional zur relativen Änderung \( \frac{\Delta R_f}{R_f} \), was bedeutet, dass die Verstärkungsänderung direkt von der Änderung des Gegenkopplungswiderstands abhängt.
+
+Die \textbf{nicht-invertierende Schaltung} ist weniger empfindlich, da die Verstärkungsänderung durch den Faktor \( 1 + \frac{R_f}{R_{in}} \) abgeschwächt wird.
+
+\textbf{Fazit:} Die invertierende Schaltung reagiert empfindlicher auf Änderungen des Gegenkopplungswiderstands.
+
+\subsection*{4. Zahlenbeispiel}
+Gegeben:
+\begin{itemize}
+    \item \( R_f = 10 \, \text{k}\Omega \)
+    \item \( R_{in} = 1 \, \text{k}\Omega \)
+    \item Toleranz \( \Delta R_f = 5\% \), also \( \Delta R_f = 0,05 \times 10 \, \text{k}\Omega = 0,5 \, \text{k}\Omega \)
+\end{itemize}
+
+\textbf{Invertierende Schaltung:}
+\[
+\frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f} = \frac{0,5}{10} = 0,05 \quad \text{(5\% relative Änderung)}
+\]
+
+\textbf{Nicht-invertierende Schaltung:}
+\[
+\frac{\Delta A_V}{A_V} = \frac{\frac{\Delta R_f}{R_{in}}}{1 + \frac{R_f}{R_{in}}} = \frac{\frac{0,5}{1}}{1 + \frac{10}{1}} = \frac{0,5}{11} \approx 0,0455 \quad \text{(4,55\% relative Änderung)}
+\]
+
+\noindent Hier zeigt sich, dass die nicht-invertierende Schaltung eine geringere relative Verstärkungsänderung aufweist.
+
 
 \section{Versuch 6: Aktiver Tiefpass erster Ordnung}
 \subsection{Zielsetzung}
