@@ -98,7 +98,7 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \caption{Schaltungsskizze}
 \end{figure}
 
-\noindent Für den Schatungsaufbau wurde zunächst der Funktionsgenerator mit einem ""kabel, mit Masse an die Black-Box mit der Nummer 24, und mit der Versorgungsspannung an das Steckbrett angeschlossen. An den Anschluss, an dem die Versorgungsspannung anliegt, wurde ein Steckkabel angeschlossen, welches dann den 4.7~$\Omega$ in Reihe schält. Die Black-Box wurde nun ebenfalls mit dem Steckbrett, hinter den Widerstand, verschaltet. Das Oszilloskop wurde nun parallel zur Black-Box angeschlossen. Hierfür wurde ein Oszilloskop BNC Tastkopf mit Messklemme verwendet. Die Masseklemme wurde an die Black-Box-Masse verbunden. Die Messklemme wurde mit einem weiteren Steckkabel am Steckbrett eingehakt, welches parallel zum Kondensator verläuft. Der Schaltungsaufbau ist in Figure 3 drgestellt.
+\noindent Für den Schatungsaufbau wurde zunächst der Funktionsgenerator mit einem ""kabel, mit Masse an die Black-Box und mit der Versorgungsspannung an das Steckbrett angeschlossen. An den Anschluss, an dem die Versorgungsspannung anliegt, wurde ein Steckkabel angeschlossen, welches dann den 4.7~$\Omega$ in Reihe schält. Die Black-Box wurde nun ebenfalls mit dem Steckbrett, hinter den Widerstand, verschaltet. Das Oszilloskop wurde nun parallel zur Black-Box angeschlossen. Hierfür wurde ein Oszilloskop BNC Tastkopf mit Messklemme verwendet. Die Masseklemme wurde an die Black-Box-Masse verbunden. Die Messklemme wurde mit einem weiteren Steckkabel am Steckbrett eingehakt, welches parallel zum Kondensator verläuft. Der Schaltungsaufbau ist in Figure 3 dargestellt.
 
 \begin{figure}[H]
     \centering
@@ -191,7 +191,7 @@ Black Box.
 \newpage
 
 \subsection{Messkonzept}
-Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste lediglich die Black-Box des ersten Versuchs durch eine Black-Box mit einer Nummer zwischen 1 und 17 ersetzt werden. In diesem Versuchsbericht wurde Nummer 6 verwendet. Diese konnte identisch zur vorherigen angeschlossen werden. Bevor die Schaltung aufgebaut wurde, wurde zunächst der Widerstand der verwendeten Black-Box mit dem DMM gemessen (siehe Figure 8). Nun wurde die Black-Box in dei Schaltung integriert. Um herauszufinden, welche Bauteile sich in der Black-Box befinden und wie diese miteinander verschaltet sind, sollten die Frequenzen des Rechtecksignals verändert werden und dabei der Verlauf der Funktion auf dem Oszilloskop beobachtet werden. An dem Verlauf, welcher in Figure 9 zu sehen ist konnte mithilfe der Curser abgelsen werden, dass die Eingangsamplitude 5 V und die Ausgangsamplitude 2,96 V entspricht. Dazu kommt, dass es sich um ein periodisches Verhalten handelt und ein Lade- und ein Entladevorgang erkennbar sind. Daraus lies sich schließen, dass es sich in jedem Fall um einen Kondensator handeln muss. Da bei der Widerstands-Messung der Black-Box!!!
+Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste lediglich die Black-Box des ersten Versuchs durch eine Black-Box mit einer Nummer zwischen 1 und 17 ersetzt werden. In diesem Versuchsbericht wurde Nummer 6 verwendet. Diese konnte identisch zur vorherigen angeschlossen werden. Bevor die Schaltung aufgebaut wurde, wurde zunächst der Widerstand der verwendeten Black-Box mit dem DMM gemessen (siehe Figure 8). Nun wurde die Black-Box in die Schaltung integriert. Um herauszufinden, welche Bauteile sich in der Black-Box befinden und wie diese miteinander verschaltet sind, sollten die Frequenzen des Rechtecksignals verändert werden und dabei der Verlauf der Funktion auf dem Oszilloskop beobachtet werden. An dem Verlauf, welcher in Figure 9 zu sehen ist konnte mithilfe der Curser abgelsen werden, dass die Eingangsamplitude 5 V und die Ausgangsamplitude 2,96 V entspricht. Dazu kommt, dass es sich um ein periodisches Verhalten handelt und ein Lade- und ein Entladevorgang erkennbar sind. Daraus lies sich schließen, dass es sich in jedem Fall um einen Kondensator handeln muss. Da bei der Widerstands-Messung der Black-Box!!!
 
 \begin{figure}[H]
     \centering
@@ -243,20 +243,39 @@ einem Widerstand R anfällt.
 \newpage
 
 \subsection{Messkonzept}
-Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemessen (siehe Table 3), um die Genauigkeit der darauf folgenden Messungen zu steigern. 
+Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemessen (siehe Table 3), um die Genauigkeit der darauf folgenden Messungen zu steigern. Anschließend wurde das Netzgerät auf 5~V Spannung eingestellt und der Strom auf 200~mA begrenzt. Gemäß der Schaltskizze~1 (siehe Figure 10) wurde nun eine Schaltung aufgebaut (siehe Figure 11). Das Netzgerät versorgt das Steckbrett mit der voreingestellten Spannung. Der Strom wurde nun mit den Sicherheits-Prüfspitzen mittels direkter Strommessung auf 5.06~mA bestimmt (siehe Figure 11). Über die Formel \(P = I^2 \cdot R \) konnte nun die Leistung bestimmt werden.
+
+\[
+P ~=~ I^2 \cdot R ~=~ (5.06~mA)^2 \cdot 988~\Omega ~=~ 25.3~mW
+\]\\
+
+\noindent Messfehler!!!\\\\
+Nun wurde die Versorgungsspannung auf 10~V erhöht. Die Schaltung wurde gemäß der Schaltskizze~2 (siehe Figure 10) umgebaut (siehe Figure 12). Nun sollte mit indirekter Strommessung gemäß der Formel \(P ~=~  (\frac{U}{R\textsubscript{v}})^2 \cdot R\) die Leistung bestimmt werden. Dabei soll r\textsubscript{v} als zweiter Widerstand!!!! dienen.
+
+\[
+P ~=~  (\frac{U}{R\textsubscript{v}})^2 \cdot R ~=~ (\frac{10~V}{996~\Omega})^2 \cdot 988~\Omega ~=~ 99.6~mW
+\]
+
+\noindent Messfehler!!!
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Schaltskizzen Widerstandsmessung.jpeg}
-\caption{...}
+\caption{Schaltskizze 1 (Messung R) und Schaltskizze 2 (Messung R\textsubscript{v})}
 \end{figure}
 
 
 
 \begin{figure}[H]
     \centering
-   % \includegraphics[]{}
-\caption{...}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3979.jpeg}
+\caption{Messung R}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3980.jpeg}
+\caption{Messung R\textsubscript{v}}
 \end{figure}
 
 
@@ -274,6 +293,8 @@ Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemess
 	\end{tabular}
 	\caption{Nachmessung der Widerstände}
 \end{table}
+!!!!!
+
 
 \newpage
 \section{Versuch 4: Widerstandsmessung mittels Vierdrahtmethode}
