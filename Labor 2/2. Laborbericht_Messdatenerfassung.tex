@@ -53,7 +53,7 @@ Das Ziel des ersten Versuchs bestand darin, die Kapazität eines unbekannten Kon
 \item Teledyne Technologies Funktionsgenerator T3AFG80 80 MHz
 \item Keysight Oszilloskop (DSOX1102A)
 \item Fluke 87 V True RMS Multimeter
-\item Oszilloskop BNC Tastkopf mit Messeklemme
+\item Oszilloskop BNC Tastkopf mit Messklemme
 \item Steckkabel (mehrere)
 \item Tru Components Steckbrett
 \item Bananenkabel (schwarz und rot)
@@ -76,7 +76,7 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \caption{Ladekurve (blau) und Entladekurve (rot) eines Kondensators}
 \end{figure}
 
-\noindent Diese sollte in den folgenden Schritten mit dem Oszilloskop sichtbar gemacht werden. Hierzu wurde sich zunächst überlegt, wie der Funktionsgenerator einzustellen ist. Table 1 sind diese Einstellungen zu entnehmen. Für die verwendete Frequenz muss dabei gelten, dass...!!!, warum einstellungen so?
+\noindent Diese sollte in den folgenden Schritten mit dem Oszilloskop sichtbar gemacht werden. Hierzu wurde sich zunächst überlegt, wie der Funktionsgenerator einzustellen ist. Diese Einstellungen sind Table 1 zu entnehmen. Für die verwendete Frequenz muss dabei gelten, dass...!!!, warum einstellungen so?
 
 \begin{table}[H]
 	\centering
@@ -90,24 +90,53 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 	\caption{Einstellungen des Funktionsgenerators}
 \end{table}
 
-\noindent Nachem der Funktionsgenerator korrekt eingestellt war, wurde die Schaltung  für die Messungen aufgebaut. Dabei wurde sich an der in Figure 2 dargestellten Skizze orientiert. Der, in der Skizze dargestellte, 50$\Omega$ Widerstand ist der Innenwiderstand des Funktionsgenerators.Dieser muss bei späteren Rechnungen berücksichtigt werden.\\
+\noindent Nachem der Funktionsgenerator korrekt eingestellt war, wurde die Schaltung  für die Messungen aufgebaut. Dabei wurde sich an der in Figure 2 dargestellten Skizze orientiert. Der, in der Skizze dargestellte, 50$\Omega$ Widerstand ist der Innenwiderstand des Funktionsgenerators. Dieser muss bei späteren Rechnungen berücksichtigt werden.\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/SchaltungsaufbauVersuch1.jpeg}
+    \includegraphics[width=0.6\textwidth]{../Quellen/Labor2/SchaltungsaufbauVersuch1.jpeg}
 \caption{Schaltungsskizze}
 \end{figure}
 
-Hierfür wurde das Oszilloskop mit einem Oszilloskop BNC Tastkopf mit Messeklemme an die Black-Box Nr.24 angeschlossen. Die Messklemme
+\noindent Für den Schatungsaufbau wurde zunächst der Funktionsgenerator mit einem ""kabel, mit Masse an die Black-Box mit der Nummer 24, und mit der Versorgungsspannung an das Steckbrett angeschlossen. An den Anschluss, an dem die Versorgungsspannung anliegt, wurde ein Steckkabel angeschlossen, welches dann den 4.7~$\Omega$ in Reihe schält. Die Black-Box wurde nun ebenfalls mit dem Steckbrett, hinter den Widerstand, verschaltet. Das Oszilloskop wurde nun parallel zur Black-Box angeschlossen. Hierfür wurde ein Oszilloskop BNC Tastkopf mit Messklemme verwendet. Die Masseklemme wurde an die Black-Box-Masse verbunden. Die Messklemme wurde mit einem weiteren Steckkabel am Steckbrett eingehakt, welches parallel zum Kondensator verläuft. Der Schaltungsaufbau ist in Figure 3 drgestellt.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../Quellen/Labor2/Fotos/IMG_3965.jpeg}
-\caption{Schaltungsskizze}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/IMG_3965 - Kopie.jpeg}
+\caption{Schaltungsaufbau}
 \end{figure}
 
+\noindent Der Verlauf der Lade- und der Entladekurve konnte nun am Oszilloskop abgelesen werden (siehe Figure 4). Diese wurde reingezoomt (siehe Figure 5), um die Zeitkonstante Tau ($\tau$) zu ermitteln. !!! \\
+Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des Kondensators bestimmt werden. Hierzu wurde zuerst der ohm'sche Widerstand (4.7 k$\Omega$) mit dem Digital-Multimeter (DMM) nachgemessen. Der Widerstand wurde mit den Sicherheits-Klemmprüfspitzen, wie in Figure 6 gezeigt, gemessen. Mit diesem Widerstand, dem Innenwiderstand des Funktionsgenerators und der ermittelten Zeitkonstante konnte nun die Kapazität des Kondensators mit der Formel $\tau = R \cdot C$ ausgerechnet werden.
+
+\[
+C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~=~ 7337~pF
+\]
+
+\noindent In Table 2 sind alle in der Schaltung und der Messanordnung vorkommenden absoluten bzw. relativen Einzelfehler aufgelistet.!!!
 
 \subsection{Messergebnisse}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_0.png}
+\caption{Ladekurve des Kondensators}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_1.png}
+\caption{reingezoomte Ladekurve des Kondensators für Tau-Bestimmung}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Fotos/IMG_3963gezoomt.jpeg}
+\caption{Messung ohm'scher Widerstand mit dem DMM}
+\end{figure}
+
+
+
 \begin{table}[H]
 	\centering
 	\scalebox{0.8}{	
@@ -130,98 +159,99 @@ Hierfür wurde das Oszilloskop mit einem Oszilloskop BNC Tastkopf mit Messeklemm
 		\hline
 	\end{tabular}
 	}
-	\caption{...}
+	\caption{}
 \end{table}
 
 
-
+\newpage
 \section{Versuch 2: Passiver Zweipol (Black Box)}
 \subsection{Zielsetzung}
-Bestimmung der Bauteile Typen (Möglichkeiten: R, L oder C) und deren Anordnung innerhalb einer
+Bestimmung der Bauteil-Typen (Möglichkeiten: R, L oder C) und deren Anordnung innerhalb einer
 Black Box.
 
 \subsection{Bauteile und Messgeräte}
+\subsubsection*{Messgeräte}
 \begin{itemize}
-\item Netzgerät (NEP-8323)
-\item Fluke 87 V True RMS Multimeter
+\item Teledyne Technologies Funktionsgenerator T3AFG80 80 MHz
 \item Keysight Oszilloskop (DSOX1102A)
-\item Bananenkabel (mehrere: rot, blau, schwarz)
+\item Netzgerät (NEP-8323)?
+\item Fluke 87 V True RMS Multimeter
+\item Oszilloskop BNC Tastkopf mit Messklemme
+\item Steckkabel (mehrere)
+\item Tru Components Steckbrett
+\item Bananenkabel (schwarz und rot)
 \item Sicherheits-Klemmprüfspitze (2 Stück)
-\item Oszilloskop BNC Tastkopf mit Messeklemme
-\item Steckkabel (mehrere: im Idealfall verschiedene Farben)
-\item Steckbrett\\
 \end{itemize}
 
-
+\subsubsection*{Bauteile}
 \begin{itemize}
-\item A/D Converter - ADC080x
-\item 10 Segment LED-Bar - OSX10201-B
-\newpage
-\item Kondensatoren: 
-	\begin{itemize}
-	\item 10 µF "Tantalum"
-	\item 0,1 µF (2 Stück)
-	\item 150 pF
-	\end{itemize}
-\item Widerstände: 
-	\begin{itemize}
-	\item 1k$\Omega$
-	\item 10k$\Omega$
-	\item 8 x 1 k$\Omega$ Widerstandsnetzwerk
-	\end{itemize}
+\item Black-Box (Nr. 1-17)
+\item Widerstand Nominalwert 4,7 k$\Omega$
 \end{itemize}
+\newpage
 
 \subsection{Messkonzept}
-...
+Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste lediglich die Black-Box des ersten Versuchs durch eine Black-Box mit einer Nummer zwischen 1 und 17 ersetzt werden. In diesem Versuchsbericht wurde Nummer 6 verwendet. Diese konnte identisch zur vorherigen angeschlossen werden. Bevor die Schaltung aufgebaut wurde, wurde zunächst der Widerstand der verwendeten Black-Box mit dem DMM gemessen (siehe Figure 8). Nun wurde die Black-Box in dei Schaltung integriert. Um herauszufinden, welche Bauteile sich in der Black-Box befinden und wie diese miteinander verschaltet sind, sollten die Frequenzen des Rechtecksignals verändert werden und dabei der Verlauf der Funktion auf dem Oszilloskop beobachtet werden. An dem Verlauf, welcher in Figure 9 zu sehen ist konnte mithilfe der Curser abgelsen werden, dass die Eingangsamplitude 5 V und die Ausgangsamplitude 2,96 V entspricht. Dazu kommt, dass es sich um ein periodisches Verhalten handelt und ein Lade- und ein Entladevorgang erkennbar sind. Daraus lies sich schließen, dass es sich in jedem Fall um einen Kondensator handeln muss. Da bei der Widerstands-Messung der Black-Box!!!
 
 \begin{figure}[H]
     \centering
-   % \includegraphics[]{}
-\caption{...}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/SkizzeVerschaltungWiderstandKondensatorVersuch2.jpeg}
+\caption{Schaltskizze}
 \end{figure}
 
 
 \subsection{Messergebnisse}
-...
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Fotos/IMG_3973gezoomt.jpeg}
+\caption{...}
+\end{figure}
 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_3.png}
+\caption{...}
+\end{figure}
+
+
+
+
+
+\newpage
 \section{Versuch 3: Leistungsaufnahme eines elektrischen Widerstands}
 \subsection{Zielsetzung}
 Es soll die elektrische Leistung bestimmt werden, die bei Stromdurchfluss in
 einem Widerstand R anfällt.
 
 \subsection{Bauteile und Messgeräte}
+\subsubsection*{Messgeräte}
 \begin{itemize}
 \item Netzgerät (NEP-8323)
 \item Fluke 87 V True RMS Multimeter
-\item Keysight Oszilloskop (DSOX1102A)
-\item Bananenkabel (mehrere: rot, blau, schwarz)
+\item Steckkabel (mehrere)
+\item Tru Components Steckbrett
+\item Bananenkabel (schwarz und rot)
 \item Sicherheits-Klemmprüfspitze (2 Stück)
-\item Oszilloskop BNC Tastkopf mit Messeklemme
-\item Steckkabel (mehrere: im Idealfall verschiedene Farben)
-\item Steckbrett\\
 \end{itemize}
 
-
+\subsubsection*{Bauteile}
 \begin{itemize}
-\item A/D Converter - ADC080x
-\item 10 Segment LED-Bar - OSX10201-B
-\newpage
-\item Kondensatoren: 
-	\begin{itemize}
-	\item 10 µF "Tantalum"
-	\item 0,1 µF (2 Stück)
-	\item 150 pF
-	\end{itemize}
-\item Widerstände: 
-	\begin{itemize}
-	\item 1k$\Omega$
-	\item 10k$\Omega$
-	\item 8 x 1 k$\Omega$ Widerstandsnetzwerk
-	\end{itemize}
+\item Widerstand Nominalwert 1 k$\Omega$ (2 Stück)
 \end{itemize}
+\newpage
 
 \subsection{Messkonzept}
-...
+Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemessen (siehe Table 3), um die Genauigkeit der darauf folgenden Messungen zu steigern. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Schaltskizzen Widerstandsmessung.jpeg}
+\caption{...}
+\end{figure}
+
+
 
 \begin{figure}[H]
     \centering
@@ -231,7 +261,19 @@ einem Widerstand R anfällt.
 
 
 \subsection{Messergebnisse}
-...
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		  & gemessener Widerstand\\
+		\hline		
+		\textbf{R} & 988 $\Omega$\\
+		\hline
+		\textbf{R\textsubscript{v}} & 996 $\Omega$\\
+		\hline
+	\end{tabular}
+	\caption{Nachmessung der Widerstände}
+\end{table}
 
 \section{Versuch 4: Widerstandsmessung mittels Vierdrahtmethode}
 \subsection{Zielsetzung}
