@@ -108,12 +108,10 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \caption{Schaltungsaufbau}
 \end{figure}
 
-\noindent Der Verlauf der Lade- und der Entladekurve konnte nun am Oszilloskop abgelesen werden (siehe Figure 4). Diese wurde reingezoomt (siehe Figure 5), um die Zeitkonstante Tau ($\tau$) zu ermitteln. !!! \\
-Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des Kondensators bestimmt werden. Hierzu wurde zuerst der ohm'sche Widerstand (4.7 k$\Omega$) mit dem Digital-Multimeter (DMM) nachgemessen. Der Widerstand wurde mit den Sicherheits-Klemmprüfspitzen, wie in Figure 6 gezeigt, gemessen. Mit diesem Widerstand, dem Innenwiderstand des Funktionsgenerators und der ermittelten Zeitkonstante konnte nun die Kapazität des Kondensators mit der Formel $\tau = R \cdot C$ ausgerechnet werden.
+\noindent Der Verlauf der Lade- und der Entladekurve konnte nun am Oszilloskop abgelesen werden (siehe Figure 4). Nun sollte die Zeitkonstante Tau ($\tau$) ermittelt werden. Weil $\tau$ die Zeit angibt, die vergeht, bis ein Kondensator um 63~\% aufgeladen ist, wurde für die Ermittlung von $\tau$ die Eingangsspannung \(5~V \cdot 0.63~=~3.15~V\) gerechnet. Auf diesen Wert, wurden dann die Curser am Oszilloskop angepasst und das Bild geschickt vergrößert. Im sich ergebenden Bildabschnitt (siehe Figure 4), konnte nun die Zeit für $\tau$ abgelesen werden.\\\\
+Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des Kondensators bestimmt werden. Hierzu wurde zuerst der ohm'sche Widerstand (4.7 k$\Omega$) mit dem Digital-Multimeter (DMM) nachgemessen. Der Widerstand wurde mit den Sicherheits-Klemmprüfspitzen, wie in Figure 5 gezeigt, gemessen. Mit diesem Widerstand, dem Innenwiderstand des Funktionsgenerators und der ermittelten Zeitkonstante konnte nun die Kapazität des Kondensators mit der Formel $\tau = R \cdot C$ ausgerechnet werden.
 
-\[
-C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~=~ 7337~pF
-\]
+
 
 \noindent In Table 2 sind alle in der Schaltung und der Messanordnung vorkommenden absoluten bzw. relativen Einzelfehler aufgelistet.!!!
 
@@ -121,15 +119,10 @@ C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_0.png}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_1.png}
 \caption{Ladekurve des Kondensators}
 \end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_1.png}
-\caption{reingezoomte Ladekurve des Kondensators für Tau-Bestimmung}
-\end{figure}
+Aus der Ladekurve in Figure 4 konnte für Tau der Wert abgelesen werden: \(\tau~=~34.2~\cdot~10^{-6}~s\).
 
 \begin{figure}[H]
     \centering
@@ -137,6 +130,10 @@ C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega
 \caption{Messung ohm'scher Widerstand mit dem DMM}
 \end{figure}
 
+In die genannte Formel, wurde der gemessene Widerstand R~=~4611~$\Omega$, der 50~$\Omega$ Innenwiderstand und das abgelesene $\tau$ eingesetzt und ausgerechnet.
+\[
+C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~=~ 7337~pF
+\]
 
 
 \begin{table}[H]
@@ -342,13 +339,13 @@ Das Messkonzept basiert auf der Nutzung der Vierdrahtmethode. Sie kann hohe Gena
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../Quellen/Labor2/Fotos/IMG_3983.jpeg}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3983.jpeg}
 \caption{Teil der Steckverbindung nicht berücksichtigt}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../Quellen/Labor2/Fotos/IMG_3982.jpeg}
+    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3982.jpeg}
 \caption{Messung über gesamtes Objekt inkl. der ganzen Steckverbindungen}
 \end{figure}
 
