@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{textcomp}
+\usepackage{xcolor}
 
 \geometry{a4paper, margin=1in}
 
@@ -35,9 +36,8 @@
 \addcontentsline{toc}{section}{Einführung und Überblick}
 Die moderne Messtechnik bildet die Grundlage zahlreicher technischer sowie naturwissenschaftlicher Erkenntnisse. Dabei ist jedoch zu berücksichtigen, dass Messergebnisse nie vollständig fehlerfrei sind. Die Ursachen für Messfehler und -ungenauigkeiten sind vielfältig. Diese können beispielsweise in einer fehlenden Kalibrierung, in der Linearität und Stabilität der verwendeten Messinstrumente oder in einer mangelnden Qualität des Messobjekts liegen. Darüber hinaus kann auch die messende Person selbst, als Ursache für den Messfehler, in Betracht gezogen werden, welche, zum Beispiel aufgrund einer möglichen Sehschwäche oder eines ungünstigen Blickwinkels, die Messwerte ungenau abliest. Auch unangepasste oder unvollkommene Messmethoden können zu einer Verfälschung der Messung führen.\\\\
 Die genannten Ursachen können zu drei verschiedenen Fehlerarten führen: grobe, statistische und systematische Fehler.\\
-Um die Qualität und die Aussagekraft von Messergebnissen beurteilen zu können, gibt es die Fehlerrechnung. Mit ihrer Hilfe kann der Rahmen bestimmt werden, in dem die Messung zuverlässig ist.\\
-Fehlerfortpflanzung....?!\\\\
-\noindent In diesem Laborbericht werden Versuche beschrieben, welche die Genauigkeit verschiedener Bauteile ermitteln. Des Weiteren beschäftigen sich diese mit Fehlerrechnung
+Um die Qualität und die Aussagekraft von Messergebnissen beurteilen zu können, gibt es die Fehlerrechnung. Mit ihrer Hilfe kann der Rahmen bestimmt werden, in dem die Messung zuverlässig ist.\\\\
+\noindent In diesem Laborbericht werden verschiedene Experimente beschrieben, die sich mit der Genauigkeit und Funktionsweise unterschiedlicher Bauteile und Messmethoden beschäftigen. Ziel ist es, die verschiedenen Fehlerarten systematisch zu untersuchen und deren Einfluss auf die Messergebnisse zu analysieren. Dazu werden Fehlerrechnungen durchgeführt, um die Unsicherheiten der Messungen zu quantifizieren und mögliche Ursachen für Abweichungen zu identifizieren.
 
 
 \newpage
@@ -45,7 +45,7 @@ Fehlerfortpflanzung....?!\\\\
 \section{Versuch 1: Kapazitätsmessung eines unbekannten Kondensators (Black Box)}
 
 \subsection{Zielsetzung}
-Für den ersten Versuch, galt es Das Ziel des ersten Versuchs bestand darin, die Kapazität eines unbekannten Kondesators in einer Black-Box zu bestimmen. 
+Für den ersten Versuch war eine Black-Box gegeben. Diese beinhaltete einen Kondensator, mit einer unbekannten Größe zwischen $1 nF$ und $10 nF$. Das Ziel des ersten Versuchs bestand darin, die Kapazität dieses unbekannten Kondesators zu bestimmen. 
 
 \subsection{Bauteile und Messgeräte}
 \subsubsection*{Messgeräte}
@@ -63,7 +63,7 @@ Für den ersten Versuch, galt es Das Ziel des ersten Versuchs bestand darin, die
 \subsubsection*{Bauteile}
 \begin{itemize}
 \item Black-Box (Nr. 18-30)
-\item Widerstand Nominalwert 4,7 k$\Omega$
+\item Widerstand Nominalwert 4,7 k$\Omega$, Toleranz 5~\%
 \end{itemize}
 
 
@@ -78,21 +78,21 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \caption{Ladekurve (blau) und Entladekurve (rot) eines Kondensators}
 \end{figure}
 
-\noindent Diese sollte in den folgenden Schritten mit dem Oszilloskop sichtbar gemacht werden. Hierzu wurde sich zunächst überlegt, wie der Funktionsgenerator einzustellen ist. Diese Einstellungen sind Table 1 zu entnehmen. Für die verwendete Frequenz muss dabei gelten, dass...!!!, warum einstellungen so?
+\noindent Diese sollte in den folgenden Schritten mit dem Oszilloskop sichtbar gemacht werden. Hierzu wurde sich zunächst überlegt, wie der Funktionsgenerator einzustellen ist. Diese Einstellungen sind Table 1 zu entnehmen. Für die verwendete Frequenz muss dabei gelten, dass die Periode \(T~=~\frac{1}{f}\) wesentlich größer ist als die Zeitkonstante, um die vollständige Ladung und Entladung sichtbar zu machen.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\textbf{Frequenz} & \textbf{Signalform} & \textbf{Amplitude} & \textbf{Offset}\\
+		\textbf{Frequenz in Hz} & \textbf{Signalform} & \textbf{Amplitude in V\textsubscript{pp}} & \textbf{Offset in V\textsubscript{dc}}\\
 		\hline
-		500 Hz & Rechtecksignal & 5 V\textsubscript{pp} & 2.5 V\textsubscript{dc}\\
+		500 & Rechtecksignal & 5 & 2.5\\
 		\hline
 	\end{tabular}
 	\caption{Einstellungen des Funktionsgenerators}
 \end{table}
 
-\noindent Nachem der Funktionsgenerator korrekt eingestellt war, wurde die Schaltung  für die Messungen aufgebaut. Dabei wurde sich an der in Figure 2 dargestellten Skizze orientiert. Der, in der Skizze dargestellte, 50$\Omega$ Widerstand ist der Innenwiderstand des Funktionsgenerators. Dieser muss bei späteren Rechnungen berücksichtigt werden.\\
+\noindent Nachem der Funktionsgenerator korrekt eingestellt war, wurde die Schaltung  für die Messungen aufgebaut. Dabei wurde sich an der in Figure 2 dargestellten Skizze orientiert. Der, in der Skizze dargestellte, 50~$\Omega$ Widerstand ist der Innenwiderstand des Funktionsgenerators. Dieser muss bei späteren Rechnungen berücksichtigt werden.\\
 
 \begin{figure}[H]
     \centering
@@ -100,7 +100,7 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \caption{Schaltungsskizze}
 \end{figure}
 
-\noindent Für den Schatungsaufbau wurde zunächst der Funktionsgenerator mit einem ""kabel, mit Masse an die Black-Box und mit der Versorgungsspannung an das Steckbrett angeschlossen. An den Anschluss, an dem die Versorgungsspannung anliegt, wurde ein Steckkabel angeschlossen, welches dann den 4.7~$\Omega$ in Reihe schält. Die Black-Box wurde nun ebenfalls mit dem Steckbrett, hinter den Widerstand, verschaltet. Das Oszilloskop wurde nun parallel zur Black-Box angeschlossen. Hierfür wurde ein Oszilloskop BNC Tastkopf mit Messklemme verwendet. Die Masseklemme wurde an die Black-Box-Masse verbunden. Die Messklemme wurde mit einem weiteren Steckkabel am Steckbrett eingehakt, welches parallel zum Kondensator verläuft. Der Schaltungsaufbau ist in Figure 3 dargestellt.
+\noindent Für den Schatungsaufbau wurde zunächst der Funktionsgenerator mit einer BNC-Messleitung, mit Masse an die Black-Box Nr. 24 und mit der Versorgungsspannung an das Steckbrett angeschlossen. An den Anschluss, an dem die Versorgungsspannung anliegt, wurde ein Steckkabel angeschlossen, welches dann den 4.7~$\Omega$ in Reihe schält. Die Black-Box wurde nun ebenfalls mit dem Steckbrett, hinter den Widerstand, verschaltet. Das Oszilloskop wurde nun parallel zur Black-Box angeschlossen. Hierfür wurde ein Oszilloskop BNC Tastkopf mit Messklemme verwendet. Die Masseklemme wurde an die Black-Box-Masse verbunden. Die Messklemme wurde mit einem weiteren Steckkabel am Steckbrett eingehakt, welches parallel zum Kondensator verläuft. Der Schaltungsaufbau ist in Figure 3 dargestellt.
 
 \begin{figure}[H]
     \centering
@@ -109,11 +109,8 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 \end{figure}
 
 \noindent Der Verlauf der Lade- und der Entladekurve konnte nun am Oszilloskop abgelesen werden (siehe Figure 4). Nun sollte die Zeitkonstante Tau ($\tau$) ermittelt werden. Weil $\tau$ die Zeit angibt, die vergeht, bis ein Kondensator um 63~\% aufgeladen ist, wurde für die Ermittlung von $\tau$ die Eingangsspannung \(5~V \cdot 0.63~=~3.15~V\) gerechnet. Auf diesen Wert, wurden dann die Curser am Oszilloskop angepasst und das Bild geschickt vergrößert. Im sich ergebenden Bildabschnitt (siehe Figure 4), konnte nun die Zeit für $\tau$ abgelesen werden.\\\\
-Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des Kondensators bestimmt werden. Hierzu wurde zuerst der ohm'sche Widerstand (4.7 k$\Omega$) mit dem Digital-Multimeter (DMM) nachgemessen. Der Widerstand wurde mit den Sicherheits-Klemmprüfspitzen, wie in Figure 5 gezeigt, gemessen. Mit diesem Widerstand, dem Innenwiderstand des Funktionsgenerators und der ermittelten Zeitkonstante konnte nun die Kapazität des Kondensators mit der Formel $\tau = R \cdot C$ ausgerechnet werden.
-
-
-
-\noindent In Table 2 sind alle in der Schaltung und der Messanordnung vorkommenden absoluten bzw. relativen Einzelfehler aufgelistet.!!!
+Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des Kondensators bestimmt werden. Hierzu wurde zuerst der ohm'sche Widerstand (4.7 k$\Omega$) mit dem Digital-Multimeter (DMM) nachgemessen. Der Widerstand wurde mit den Sicherheits-Klemmprüfspitzen, wie in Figure 5 gezeigt, gemessen. Mit diesem Widerstand, dem Innenwiderstand des Funktionsgenerators und der ermittelten Zeitkonstante konnte nun die Kapazität des Kondensators mit der Formel $\tau = R \cdot C$ ausgerechnet werden.\\
+In Table 2 sind alle in der Schaltung und der Messanordnung vorkommenden absoluten bzw. relativen Einzelfehler aufgelistet.\\Einer der aufgelisteten Fehler, kommt durch das BNC-Kabel zustande. Dieses wirkt durch dessen Aufbau wie ein Kondensator. Die daraus resultierende, parasitäre Kapazität kann beispielsweise zu Signalverzerrungen führen. Um diesen Fehler zu vermeiden, beziehungsweise zu reduzieren, wurde ein Tastkopf verwendet. Tastköpfe sind für hochfrequente Signale und empfindliche Messungen besser geeignet und minimieren Verzerrungen und Signalverfälschungen.
 
 \subsection{Messergebnisse}
 
@@ -122,7 +119,7 @@ Anschließend an die Tau-Ermittlung sollte die Kapazität C\textsubscript{x} des
     \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_1.png}
 \caption{Ladekurve des Kondensators}
 \end{figure}
-Aus der Ladekurve in Figure 4 konnte für Tau der Wert abgelesen werden: \(\tau~=~34.2~\cdot~10^{-6}~s\).
+Aus der Ladekurve in Figure 4 konnte für Tau, unter $\Delta X$, der Wert \(\tau~=~34.2~\cdot~10^{-6}~s\) abgelesen werden.\\
 
 \begin{figure}[H]
     \centering
@@ -130,11 +127,23 @@ Aus der Ladekurve in Figure 4 konnte für Tau der Wert abgelesen werden: \(\tau~
 \caption{Messung ohm'scher Widerstand mit dem DMM}
 \end{figure}
 
-In die genannte Formel, wurde der gemessene Widerstand R~=~4611~$\Omega$, der 50~$\Omega$ Innenwiderstand und das abgelesene $\tau$ eingesetzt und ausgerechnet.
+\noindent In die genannte Formel, wurde für R der gemessene Widerstand mit 4611~$\Omega$, mit dem 50~$\Omega$ Innenwiderstand addiert. Das, aus Figure 4, abgelesene $\tau$ wurde eingesetzt und die Formel ausgerechnet.
 \[
-C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~=~ 7337~pF
+C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~\approx~ 7337~nF
+\]
+\noindent Als Kapazität für den Kondensator ergab sich dadurch ein Wert von 7337~$nF$.\\
+Wird mit dem Nominalwert und der Toleranz, anstelle dem gemessenen Widerstands-Wert gerechnet ergibt sich Folgendes:
+\[
+C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4700~\Omega~\pm(4700~\Omega~\cdot~0.05) + 50~\Omega}
 \]
 
+\[
+C\textsubscript{x1}~\approx~ 6861~nF~~~~~~~~~~~~~
+C\textsubscript{x2}~\approx~ 7575~nF
+\]
+
+\noindent Bei Addition der Toleranz, ergibt die Rechnung nur knappe 94~\% der, mit dem gemessenen Widerstand errechneten, Kapazität, also 6~\% und 476 nF weniger. Wird die Toleranz subtrahiert, ergeben sich 103~\% der Kapazität und damit 3~\% und 238~nF mehr.
+\textcolor{red}{Hat dies einen Einfluss auf die Genauigkeit des Ergebnisses von Cx und auf seinen Gesamtfehler, und wenn ja, welchen?}
 
 \begin{table}[H]
 	\centering
@@ -161,11 +170,29 @@ C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega
 	\caption{}
 \end{table}
 
+\subsubsection* {Fehler DMM - Messung}
+\[
+x\textsubscript{1/2}~=~4700~\Omega~\pm~(4700~\Omega~\cdot~(0.02\%~+~1~\Omega))~=~  4700~\Omega~\pm~1.94~\Omega
+\]
+\[
+x\textsubscript{1}~=~4698.06~\Omega
+\]
+\[
+x\textsubscript{2}~=~4701.94~\Omega
+\]
+\subsubsection* {Fehler x, y - Messung}
+
+\subsubsection* {Fehler Innenwiderstand (R\textsubscript{i}) - Funktionsgenerator}
+
+
+
+
+
 
 \newpage
 \section{Versuch 2: Passiver Zweipol (Black Box)}
 \subsection{Zielsetzung}
-Bestimmung der Bauteil-Typen (Möglichkeiten: R, L oder C) und deren Anordnung innerhalb einer
+Das Ziel des zweiten Versuchs, ist die Bestimmung der Bauteil-Typen (Möglichkeiten: R, L oder C) und deren Anordnung innerhalb einer
 Black Box.
 
 \subsection{Bauteile und Messgeräte}
@@ -173,7 +200,7 @@ Black Box.
 \begin{itemize}
 \item Teledyne Technologies Funktionsgenerator T3AFG80 80 MHz
 \item Keysight Oszilloskop (DSOX1102A)
-\item Netzgerät (NEP-8323)?
+\item Netzgerät (NEP-8323)
 \item Fluke 87 V True RMS Multimeter
 \item Oszilloskop BNC Tastkopf mit Messklemme
 \item Steckkabel (mehrere)
@@ -192,29 +219,58 @@ Black Box.
 
 
 \subsection{Messkonzept}
-Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste lediglich die Black-Box des ersten Versuchs durch eine Black-Box mit einer Nummer zwischen 1 und 17 ersetzt werden. In diesem Versuchsbericht wurde Nummer 6 verwendet. Diese konnte identisch zur vorherigen angeschlossen werden. Bevor die Schaltung aufgebaut wurde, wurde zunächst der Widerstand der verwendeten Black-Box mit dem DMM gemessen (siehe Figure 8). Nun wurde die Black-Box in die Schaltung integriert. Um herauszufinden, welche Bauteile sich in der Black-Box befinden und wie diese miteinander verschaltet sind, sollten die Frequenzen des Rechtecksignals verändert werden und dabei der Verlauf der Funktion auf dem Oszilloskop beobachtet werden. An dem Verlauf, welcher in Figure 9 zu sehen ist konnte mithilfe der Curser abgelsen werden, dass die Eingangsamplitude 5 V und die Ausgangsamplitude 2,96 V entspricht. Dazu kommt, dass es sich um ein periodisches Verhalten handelt und ein Lade- und ein Entladevorgang erkennbar sind. Daraus lies sich schließen, dass es sich in jedem Fall um einen Kondensator handeln muss. Da bei der Widerstands-Messung der Black-Box!!!
+Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste lediglich die Black-Box des ersten Versuchs durch eine Black-Box mit einer Nummer zwischen 1 und 17 ersetzt werden. In diesem Versuchsbericht wurde Nummer 6 verwendet. Diese Black-Box konnte identisch zur Vorherigen angeschlossen werden. Um herauszufinden, welche Bauteile sich in der Black-Box befinden und wie diese miteinander verschaltet sind, sollten die Frequenzen des Rechtecksignals verändert werden und dabei der Verlauf der Funktion auf dem Oszilloskop beobachtet werden.\\
+An dem Verlauf, welcher in Figure 7 zu sehen ist, konnte mithilfe der Curser abgelsen werden, dass die Eingangsamplitude 5 V und die Ausgangsamplitude 2,96 V entspricht. Dazu kommt, dass es sich um ein periodisches Verhalten handelt und ein Lade- und ein Entladevorgang erkennbar sind. Daraus lässt sich schließen, dass es sich in jedem Fall um einen Kondensator handeln muss. Durch die Widerstands-Messung der Black-Box durch ein DMM, wurde ein Widerstand von \(6.74~k\Omega\) festgestellt. Daraus ließ sich schließen, dass sich in der Black-Box, neben dem Kondensator, auch ein Widerstand befinden muss. Es konnte am Oszilloskop beobachtet werden, dass auch bei 0~Hz noch eine Spannung an der Black-Box anliegt. Wäre der Widerstand in Reihe zum Kondensator geschalten, würde der Kondensator bei 0~Hz keine Spannung durchlassen. Daraus lässt sich schließen, dass es sich um eine Parallelschaltung handeln muss.
+\\Nun sollte die Größe der Bauelemente bestimmt werden. Hierfür wurde der Widerstand der Black-Box mit dem DMM gemessen (siehe Figure 8). Die Größe des Kondensators konnte anschließend mithilfe des Gesamtwiderstands, ermittelt aus Innenwiderstand des Funktionsgenerators, Vorwiderstand und Black-Box-Widerstand, sowie der Zeitkonstante~$\tau$ berechnet werden.\\
+\noindent Das Rechteck-Eingangssignal am Ausgang des Zweipols vezerrt. Um mit dem Oszilloskop einen, zur Eingangsspannung proportionalen, Signalverlauf darzustellen, musste ein Kondensator parallel zum Vorwiderstand R\textsubscript{V} geschalten werden (siehe Figure 6).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/SkizzeVerschaltungWiderstandKondensatorVersuch2.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/SkizzeVerschaltungWiderstandKondensatorVersuch2.jpeg}
 \caption{Schaltskizze}
 \end{figure}
+
+\noindent Dieses Verfahren wird Kompensation genannt. Es wird allgemein verwendet, um Messfehler und Ungenauigkeiten zu eliminieren. Besonders bei elektrischen und mechanischen Messgeräten, sowie auch bei thermischen Messungen kommt die Kompensation häuig zum Einsatz.\\
+
+
+\noindent Das Verhältnis der Widerstände muss gleich dem Verhältnis der Impedanzen der Kondensatoren sein. Mit diesem Wissen konnte die Größe dieses Kondensators wie folgt berechnet werden:
+
+\[
+\frac{C\textsubscript{2}}{C\textsubscript{1}}~=~\frac{R\textsubscript{v}}{R\textsubscript{x}}~=~\frac{4.7~k\Omega}{6.74~k\Omega}~\approx~0.673\]
+
+\[
+C\textsubscript{1}~=~\frac{C\textsubscript{2}}{0.673}~=~\frac{5088.93~pF}{0.673}~\approx~7297.742~pF
+\]\\
+
+
+
+\noindent Wie bereits bei Versuch 1 beschrieben wurde, kann die Verwendung eines BNC-Kabels, durch dessen Aufbau, zu Signalverfälschungen führen. Daher wurde auch mit mit einem Tastkopf gemessen, um diese zu verringern.
 
 
 \subsection{Messergebnisse}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Fotos/IMG_3973gezoomt.jpeg}
-\caption{...}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/scope_3.png}
+\caption{Verlauf Funktion der Black-Box}
 \end{figure}
 
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/scope_3.png}
-\caption{...}
+    \includegraphics[width=0.4\textwidth]{../Quellen/Labor2/Fotos/IMG_3973gezoomt.jpeg}
+\caption{Widerstandmessung der Black-Box~~~R~=~6.74~k$\Omega$}
 \end{figure}
+
+
+\noindent Wie im Messkonzept bereits beschrieben, wurde für die Kapazitäts-Bestimmung des Kondensators zunächst der Gesamtwiderstand ausgerechnet.
+\[
+R\textsubscript{ges}~=~\frac{R\textsubscript{1} \cdot R\textsubscript{2}}{R\textsubscript{1}~+~R\textsubscript{2}}~=~\frac{(50~\Omega~+~4611~\Omega) \cdot 6740~\Omega}{(50~\Omega~+~4611~\Omega)~+~6740~\Omega}~=~2.755~k\Omega
+\]
+Um die Kapazität nun mit der Formel \(C=\frac{\tau}{R}\) auszurechnen, wurde noch der Wert für Tau benötigt. Dieser konnte wie bei Versuch 1 am Oszilloskop abgelesen werden: $\tau~=~14.02~\mu s$. Daraus ergibt sich folgende Rechnung:
+\[
+C~=~\frac{\tau}{R}~=~\frac{14.02~\mu s}{2.755~k\Omega}~=~5088.93~pF
+\]
 
 
 
@@ -223,8 +279,8 @@ Der Schaltungsaufbau des ersten Versuchs konnte so beibehalten werden. Es musste
 \newpage
 \section{Versuch 3: Leistungsaufnahme eines elektrischen Widerstands}
 \subsection{Zielsetzung}
-Es soll die elektrische Leistung bestimmt werden, die bei Stromdurchfluss in
-einem Widerstand R anfällt.
+In diesem Versuch soll die elektrische Leistung bestimmt werden, die bei Stromdurchfluss in
+einem Widerstand R anfällt. Es werden zwei Verfahren verglichen, mit dem Ziel das Verfahren zu ermitteln, mit dem eine genauere Bestimmung möglich ist.
 
 \subsection{Bauteile und Messgeräte}
 \subsubsection*{Messgeräte}
@@ -247,39 +303,50 @@ einem Widerstand R anfällt.
 
 
 \subsection{Messkonzept}
-Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemessen (siehe Table 3), um die Genauigkeit der darauf folgenden Messungen zu steigern. Anschließend wurde das Netzgerät auf 5~V Spannung eingestellt und der Strom auf 200~mA begrenzt. Gemäß der Schaltskizze~1 (siehe Figure 10) wurde nun eine Schaltung aufgebaut (siehe Figure 11). Das Netzgerät versorgt das Steckbrett mit der voreingestellten Spannung. Der Strom wurde nun mit den Sicherheits-Klemmprüfspitzen mittels direkter Strommessung auf 5.06~mA bestimmt (siehe Figure 11). Über die Formel \(P = I^2 \cdot R \) konnte nun die Leistung bestimmt werden.
+Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemessen (siehe Table 3), um die Genauigkeit der darauf folgenden Messungen zu steigern. Anschließend wurde das Netzgerät auf 5~V Spannung eingestellt und der Strom auf 200~mA begrenzt. Gemäß der Schaltskizze~1 (siehe Figure 9) wurde nun eine Schaltung aufgebaut (siehe Figure 10). Das Netzgerät versorgt das Steckbrett mit der voreingestellten Spannung. Der Strom wurde nun mit den Sicherheits-Klemmprüfspitzen mittels direkter Strommessung auf 5.06~mA bestimmt (siehe Figure 10). Über die Formel \(P = I^2 \cdot R \) konnte nun die Leistung bestimmt werden.
 
 \[
 P ~=~ I^2 \cdot R ~=~ (5.06~mA)^2 \cdot 988~\Omega ~=~ 25.3~mW
 \]\\
-
-\noindent Messfehler!!!\\\\
-Nun wurde die Versorgungsspannung auf 10~V erhöht. Die Schaltung wurde gemäß der Schaltskizze~2 (siehe Figure 10) umgebaut (siehe Figure 12). Nun sollte mit indirekter Strommessung gemäß der Formel \(P ~=~  (\frac{U}{R\textsubscript{v}})^2 \cdot R\) die Leistung bestimmt werden. Dabei soll r\textsubscript{v} als zweiter Widerstand!!!! dienen.
-
+Wahrscheinlicher Messfehler:\\
 \[
-P ~=~  (\frac{U}{R\textsubscript{v}})^2 \cdot R ~=~ (\frac{10~V}{996~\Omega})^2 \cdot 988~\Omega ~=~ 99.6~mW
+\Delta z\textsubscript{wahrsch.}~=~\sqrt{(...)}
 \]
 
-\noindent Messfehler!!!
+\noindent Messfehler!!! Geben Sie dazu die Ungenauigkeit des Ergebnisses in Form des 
+wahrscheinlichen, wie auch des maximalen Messfehlers (relativ sowie absolut) an, indem Sie die 
+einzelnen Fehlerbeiträge bestimmen und diese nach dem Fehlerfortpflanzungsgesetz zum 
+Gesamtfehler des Ergebnisses verrechnen\\\\
+Nun wurde die Versorgungsspannung auf 10~V erhöht. Die Schaltung wurde gemäß der Schaltskizze~2 (siehe Figure 9) umgebaut (siehe Figure 11). Nun sollte mit indirekter Strommessung gemäß der Formel \(P ~=~  (\frac{U}{R\textsubscript{V}})^2 \cdot R\) die Leistung bestimmt werden. Dabei soll r\textsubscript{v} als zweiter Widerstand!!!! dienen.
+
+\[
+P ~=~  (\frac{U}{R\textsubscript{V}})^2 \cdot R ~=~ (\frac{10~V}{996~\Omega})^2 \cdot 988~\Omega ~=~ 99.6~mW
+\]\\
+
+
+\noindent Messfehler!!! Geben Sie dazu die Ungenauigkeit des Ergebnisses in Form des 
+wahrscheinlichen, wie auch des maximalen Messfehlers (relativ sowie absolut) an, indem Sie die 
+einzelnen Fehlerbeiträge bestimmen und diese nach dem Fehlerfortpflanzungsgesetz zum 
+Gesamtfehler des Ergebnisses verrechnen
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Schaltskizzen Widerstandsmessung.jpeg}
-\caption{Schaltskizze 1 (Messung R) und Schaltskizze 2 (Messung R\textsubscript{v})}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Schaltskizzen Widerstandsmessung.jpeg}
+\caption{Schaltskizze 1 (Messung R) und Schaltskizze 2 (Messung R\textsubscript{V})}
 \end{figure}
 
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3979.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3979.jpeg}
 \caption{Messung R}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3980.jpeg}
-\caption{Messung R\textsubscript{v}}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3980.jpeg}
+\caption{Messung R\textsubscript{V}}
 \end{figure}
 
 
@@ -288,16 +355,17 @@ P ~=~  (\frac{U}{R\textsubscript{v}})^2 \cdot R ~=~ (\frac{10~V}{996~\Omega})^2 
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		  & gemessener Widerstand\\
+		  & gemessener Widerstand in $\Omega$\\
 		\hline		
-		\textbf{R} & 988 $\Omega$\\
+		\textbf{R} & 988\\
 		\hline
-		\textbf{R\textsubscript{v}} & 996 $\Omega$\\
+		\textbf{R\textsubscript{V}} & 996\\
 		\hline
 	\end{tabular}
 	\caption{Nachmessung der Widerstände}
 \end{table}
-!!!!!
+Begründen Sie aus den Betrachtungen der Fehlerrechnung, welches der beiden Verfahren b) oder c) 
+eine genauere Bestimmung der Leistung ergibt.!!!!
 
 
 \newpage
@@ -593,10 +661,8 @@ Bestimmung der frequenzabhängigen Verstärkung eines aktiven Tiefpasses
 \section{Diskussion}
 Was würden Sie nächstes Mal anders machen? Was hat besondere Schwierigkeiten bereitet?\\
 
-- Einleitung\\ 
 - Zielsetzungen!\\
 
-- Nr. 1b "Was muss für die verwendete Frequenz gelten?"\\
 - Tabelle Nr. 1e noch  bearbeiten?\\
 - Nr 1f)\\
 - Hinweise und Zsatzfragen beachten und miteinbauen\\
