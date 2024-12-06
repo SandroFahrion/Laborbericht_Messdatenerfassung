@@ -129,20 +129,20 @@ Aus der Ladekurve in Figure 4 konnte für Tau, unter $\Delta X$, der Wert \(\tau
 
 \noindent In die genannte Formel, wurde für R der gemessene Widerstand mit 4611~$\Omega$, mit dem 50~$\Omega$ Innenwiderstand addiert. Das, aus Figure 4, abgelesene $\tau$ wurde eingesetzt und die Formel ausgerechnet.
 \[
-C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~\approx~ 7337~nF
+C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4611~\Omega + 50~\Omega} ~\approx~ 7.337~nF
 \]
-\noindent Als Kapazität für den Kondensator ergab sich dadurch ein Wert von 7337~$nF$.\\
-Wird mit dem Nominalwert und der Toleranz, anstelle dem gemessenen Widerstands-Wert gerechnet ergibt sich Folgendes:
+\noindent Als Kapazität für den Kondensator ergab sich dadurch ein Wert von 7.337~$nF$.\\
+Wird mit dem Nominalwert und der Toleranz, anstelle dem gemessenen Widerstands-Wert gerechnet, ergibt sich Folgendes:
 \[
 C\textsubscript{x} ~=~ \frac{\tau}{R} ~=~ \frac{34.2 \cdot 10^{-6}s}{4700~\Omega~\pm(4700~\Omega~\cdot~0.05) + 50~\Omega}
 \]
 
 \[
-C\textsubscript{x1}~\approx~ 6861~nF~~~~~~~~~~~~~
-C\textsubscript{x2}~\approx~ 7575~nF
+C\textsubscript{x1}~\approx~ 6.861~nF~~~~~~~~~~~~~
+C\textsubscript{x2}~\approx~ 7.575~nF
 \]
 
-\noindent Bei Addition der Toleranz, ergibt die Rechnung nur knappe 94~\% der, mit dem gemessenen Widerstand errechneten, Kapazität, also 6~\% und 476 nF weniger. Wird die Toleranz subtrahiert, ergeben sich 103~\% der Kapazität und damit 3~\% und 238~nF mehr.
+\noindent Bei Addition der Toleranz, ergibt die Rechnung nur knappe 94~\% der, mit dem gemessenen Widerstand errechneten, Kapazität, also 6~\% und 476~$\mu F$ weniger. Wird die Toleranz subtrahiert, ergeben sich 103~\% der Kapazität und damit 3~\% und 238~$\mu F$ mehr.
 \textcolor{red}{Hat dies einen Einfluss auf die Genauigkeit des Ergebnisses von Cx und auf seinen Gesamtfehler, und wenn ja, welchen?}
 
 \begin{table}[H]
@@ -172,20 +172,77 @@ C\textsubscript{x2}~\approx~ 7575~nF
 
 \subsubsection* {Fehler DMM - Messung}
 \[
-x\textsubscript{1/2}~=~4700~\Omega~\pm~(4700~\Omega~\cdot~(0.02\%~+~1~\Omega))~=~  4700~\Omega~\pm~1.94~\Omega
+\Delta R~=~\pm(4.611~k\Omega~\cdot~0.02~\%~+~0.001~k\Omega)~=~\pm~1.94~\Omega
 \]
 \[
-x\textsubscript{1}~=~4698.06~\Omega
+R\textsubscript{-}~=~4609.06~\Omega~~~~~~~~~~R\textsubscript{+}~=~4612.94~\Omega
 \]
-\[
-x\textsubscript{2}~=~4701.94~\Omega
-\]
+
 \subsubsection* {Fehler x, y - Messung}
+\underline{Vertikale Messungenauigkeit:}\\\\
+Vertical gain accuracy: 
+\[
++(3~\% \cdot 8 \cdot 900~mV)~=~+( 0.03 \cdot 7200~mV)~=~+~216~mV
+\]
+Dual cursor accuracy: 
+\[
+\Delta U~=~\pm[DC~vertical~gain~accuracy + 0.5~\%~full~scale]
+\]
+\[
+\Delta U~=~\pm~216~mV~+~0.5~\%~\cdot~7200~mV~=~\pm~252~mV
+\]
+\\
+\noindent \underline{Horizontale Messungenauigkeit:}\\\\
+$\Delta$ Time accuracy:
+\[
+\Delta t~=~\pm(100~ppm~\cdot~34.2~\mu s~+~0.0016~\cdot~5~\mu s~+~0.2~\mu s)
+\]
+\[
+=~\pm(3.42~ns~+~8~ns+0.2~ns)~=~\pm~11.62~ns
+\]
 
-\subsubsection* {Fehler Innenwiderstand (R\textsubscript{i}) - Funktionsgenerator}
+\subsubsection* {Fehler Curser}
+\underline{Einstellungenauigkeit der Curser:}\\\\
+-horizontal: \(\frac{5~\mu s}{div}\)~=~\(\frac{5~\mu s}{50}\)~=~100 ns\\\\
++vertikal: \(\frac{0.9~V}{div}\)~=~\(\frac{0.9~V}{7.2}\)~=~12.5~mV\\\\
+\underline{Einfluss der vertikalen Messungenauigkeit auf die Messung der Zeitkonstante:}\\\\
+\[
+m\textsubscript{$\tau$}~=~\frac{dU\textsubscript{C}}{dt}~=~\frac{U\textsubscript{0}}{e~\cdot~\tau}~=~\frac{5~V}{e~\cdot~34.2~\mu s}~\approx~53.78~\frac{V}{ms}
+\]
+\[
+\Delta t\textsubscript{v}~=~\frac{252~mV}{53.78~\frac{V}{ms}}~\approx~4.69~\mu s
+\]\\
+\[
+\Delta t~=~\pm(4.69~+~ 0.01162)~\mu s~\approx~\pm~4.70162~\mu s
+\]\\
+\underline{Messergebnis:}
+\[
+\tau~=~(34.2~\pm~4.70162)~\mu s~~~~~bzw.~~~~~\tau~=~(34.2~\mu s~\pm~13.75\%)
+\]
+\subsubsection* {Wahrscheinlicher Fehler}
+\[
+\Delta C\textsubscript{wahrsch.}~=~\sqrt{\left(\frac{\Delta \tau}{R}\right)^2~+~\left(\frac{\tau~\cdot~\Delta R}{R^2}\right)^2}
+\]\\
+\[
+\Delta C\textsubscript{wahrsch.}~=~\sqrt{\left(\frac{4.70162~\mu s}{4611~\Omega}\right)^2~+~\left(\frac{34.2~\mu s~\cdot~1.94~\Omega}{(4611~\Omega)^2}\right)^2}~=~\pm~1019.658~ pF
+\]
+\subsubsection* {Wahrscheinlicher Fehler-relativ}
+\[
+\Delta C\textsubscript{wahrsch.-relativ}~=~\frac{\Delta C\textsubscript{wahrsch.}}{C\textsubscript{x}}~=~\frac{1019.658~pF}{7.337~nF}~=~13.9~\%
+\]
 
 
-
+\subsubsection* {Größtfehler}
+\[
+\Delta C\textsubscript{max.}~=~\left\lvert \frac{\Delta \tau}{R}\right\rvert~+~\left\lvert \frac{\tau~\cdot~\Delta R}{R^2}\right\rvert
+\]\\
+\[
+\Delta C\textsubscript{max.}~=~\left\lvert \frac{4.70162~\mu s}{4611~\Omega}\right\rvert~+~\left\lvert \frac{34.2~\mu s~\cdot~1.94~\Omega}{(4611~\Omega)^2}\right\rvert~=~1022.774~pF
+\]
+\subsubsection* {Größtfehler-relativ}
+\[
+\Delta C\textsubscript{max.-relativ}~=~\frac{\Delta C\textsubscript{max.}}{C\textsubscript{x}}~=~\frac{1022.774~pF}{7.337~nF}~=~13.94~\%
+\]
 
 
 
@@ -308,26 +365,79 @@ Zu Beginn dieses Versuchs, wurden die beiden Widerstände mit dem DMM nachgemess
 \[
 P ~=~ I^2 \cdot R ~=~ (5.06~mA)^2 \cdot 988~\Omega ~=~ 25.3~mW
 \]\\
+Einzelne Fehlerbeiträge:
+\[
+\Delta I~=~\pm(0.2~\%~\cdot~5.06~mA~+~0.04~mA)~=~\pm~50.12~\mu A
+\]
+\[
+\Delta R~=~\pm(988~\Omega~\cdot~0.02~\%~+~1\Omega)~=~\pm~1.198~\Omega
+\]
 Wahrscheinlicher Messfehler:\\
 \[
-\Delta z\textsubscript{wahrsch.}~=~\sqrt{(...)}
+\Delta P\textsubscript{wahrsch.}~=~\sqrt{\left(2~I~\cdot~R~\cdot~\Delta I\right)^2~+~\left(I^2~\cdot~\Delta R\right)^2}
 \]
-
-\noindent Messfehler!!! Geben Sie dazu die Ungenauigkeit des Ergebnisses in Form des 
-wahrscheinlichen, wie auch des maximalen Messfehlers (relativ sowie absolut) an, indem Sie die 
-einzelnen Fehlerbeiträge bestimmen und diese nach dem Fehlerfortpflanzungsgesetz zum 
-Gesamtfehler des Ergebnisses verrechnen\\\\
-Nun wurde die Versorgungsspannung auf 10~V erhöht. Die Schaltung wurde gemäß der Schaltskizze~2 (siehe Figure 9) umgebaut (siehe Figure 11). Nun sollte mit indirekter Strommessung gemäß der Formel \(P ~=~  (\frac{U}{R\textsubscript{V}})^2 \cdot R\) die Leistung bestimmt werden. Dabei soll r\textsubscript{v} als zweiter Widerstand!!!! dienen.
-
 \[
-P ~=~  (\frac{U}{R\textsubscript{V}})^2 \cdot R ~=~ (\frac{10~V}{996~\Omega})^2 \cdot 988~\Omega ~=~ 99.6~mW
+=~\sqrt{\left(2~\cdot~5.06~mA~\cdot~988~\Omega~\cdot~50.12~\mu A\right)^2~+~\left((5.06~mA)^2~\cdot~1.198~\Omega\right)^2}~=~\pm~502.066~\mu W
+\]\\
+\[
+\Delta P\textsubscript{wahrsch.-relativ}~=~\frac{\Delta P\textsubscript{wahrsch.}}{P}~=~\frac{502.066~\mu W}{25.3~mW}~\approx~1.98~\%
+\]
+Größtfehler:\\
+\[
+\Delta P\textsubscript{max.}~=~\left\lvert 2~I~\cdot~R~\cdot~\Delta I\right\rvert~+~\left\lvert I^2~\cdot~\Delta R\right\rvert
+\]
+\[
+=~\left\lvert 2~\cdot~5.06~mA~\cdot~988~\Omega~\cdot~50.12~\mu A\right\rvert~+~\left\lvert (5.06~mA)^2~\cdot~1.198~\Omega\right\rvert~=~\pm~531.801~\mu W
+\]\\
+\[
+\Delta P\textsubscript{max.-relativ}~=~\frac{\Delta P\textsubscript{max.}}{P}~=~\frac{531.801~\mu W}{25.3~mW}~\approx~2.1~\%
 \]\\
 
 
-\noindent Messfehler!!! Geben Sie dazu die Ungenauigkeit des Ergebnisses in Form des 
-wahrscheinlichen, wie auch des maximalen Messfehlers (relativ sowie absolut) an, indem Sie die 
-einzelnen Fehlerbeiträge bestimmen und diese nach dem Fehlerfortpflanzungsgesetz zum 
-Gesamtfehler des Ergebnisses verrechnen
+\noindent Nun wurde die Versorgungsspannung auf 10~V erhöht. Die Schaltung wurde gemäß der Schaltskizze~2 (siehe Figure 9) umgebaut (siehe Figure 11). Nun sollte mit indirekter Strommessung gemäß der Formel \(P ~=~  (\frac{U}{R\textsubscript{V}})^2 \cdot R\) die Leistung bestimmt werden. Dabei soll r\textsubscript{v} als zweiter Widerstand dienen.
+
+\[
+P ~=~  \left(\frac{U}{R\textsubscript{V}}\right)^2 \cdot R ~=~ \left(\frac{10~V}{996~\Omega}\right)^2 \cdot 988~\Omega ~\approx~ 99.6~mW
+\]\\
+
+\noindent Einzelne Fehlerbeiträge:
+\[
+\Delta U~=~\pm(0.05~\%~\cdot~10~V~+~0.01~V)~=~\pm~15~mV
+\]
+\[
+\Delta R\textsubscript{V}~=~\pm(996~\Omega~\cdot~0.02~\%~+~1\Omega)~=~\pm~1.1992~\Omega
+\]
+Wahrscheinlicher Messfehler:\\
+\[
+\Delta P\textsubscript{wahrsch.}~=~\sqrt{\left(\left(\frac{U}{R\textsubscript{V}}\right)^2~\cdot~\Delta R\right)^2~+~\left(-\frac{2~U^2}{R\textsubscript{V}^3}~\cdot~R~\cdot~\Delta R\textsubscript{V} \right)^2~+~\left(\frac{2~U}{R\textsubscript{V}^3}~\cdot~R~\cdot~\Delta U\right)^2}
+\]
+
+\[
+=\sqrt{\left(\left(\frac{10~V}{996~\Omega}\right)^2\cdot1.198~\Omega\right)^2+\left(-\frac{2\cdot(10~V)^2}{(996~\Omega)^3}\cdot988~\Omega\cdot1.1992~\Omega \right)^2+\left(\frac{2\cdot10~V}{(996~\Omega)^2}\cdot988\cdot15~mV\right)^2}
+\]
+\[
+=~\pm~401.714~\mu W
+\]
+
+\[
+\Delta P\textsubscript{wahrsch.-relativ}~=~\frac{\Delta P\textsubscript{wahrsch.}}{P}~=~\frac{401.714~\mu W}{25.3~mW}~\approx~1.59~\%
+\]
+Größtfehler:\\
+\[
+\Delta P\textsubscript{max.}~=~\left\lvert \left(\frac{U}{R\textsubscript{V}}\right)^2~\cdot~\Delta R\right\rvert~+~\left\lvert -\frac{2~U^2}{R\textsubscript{V}^3}~\cdot~R~\cdot~\Delta R\textsubscript{V}\right\rvert~+~\left\lvert \frac{2~U}{R\textsubscript{V}^3}~\cdot~R~\cdot~\Delta U\right\rvert
+\]
+
+
+\[
+=~\left\lvert \left(\frac{10~V}{996~\Omega}\right)^2\cdot1.198~\Omega\right\rvert~+~\left\lvert -\frac{2\cdot(10~V)^2}{(996~\Omega)^3}\cdot988~\Omega\cdot1.1992~\Omega\right\rvert~+~\left\lvert\frac{2\cdot10~V}{(996~\Omega)^2}\cdot988\cdot15~mV\right\rvert
+\]
+\[
+\approx~\pm~659.378~\mu W
+\]\\
+\[
+\Delta P\textsubscript{max.-relativ}~=~\frac{\Delta P\textsubscript{max.}}{P}~=~\frac{659.378~\mu W}{25.3~mW}~\approx~2.61~\%
+\]\\
+
 
 \begin{figure}[H]
     \centering
