@@ -26,7 +26,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../Quellen/Labor2/Titelbild.jpg}
+    \includegraphics[width=1.0\textwidth]{../Quellen/Labor2/Titelbild2.jpg}
 \end{figure}
 \newpage
 \tableofcontents
@@ -74,7 +74,7 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../Quellen/Labor2/Lade-EntladefunktionSkizze.png}
+    \includegraphics[width=0.9\textwidth]{../Quellen/Labor2/Lade-EntladefunktionSkizze.png}
 \caption{Ladekurve (blau) und Entladekurve (rot) eines Kondensators}
 \end{figure}
 
@@ -104,7 +104,7 @@ Zu Beginn wurde die Formel der Ladekurve \( u\textsubscript{c} = U (1 -e ^{-\fra
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/IMG_3965 - Kopie.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/IMG_3965 - Kopie.jpeg}
 \caption{Schaltungsaufbau}
 \end{figure}
 
@@ -123,7 +123,7 @@ Aus der Ladekurve in Figure 4 konnte für Tau, unter $\Delta X$, der Wert \(\tau
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Fotos/IMG_3963gezoomt.jpeg}
+    \includegraphics[width=0.3\textwidth]{../Quellen/Labor2/Fotos/IMG_3963gezoomt.jpeg}
 \caption{Messung ohm'scher Widerstand mit dem DMM}
 \end{figure}
 
@@ -167,7 +167,7 @@ C\textsubscript{x2}~\approx~ 7.575~nF
 		\hline
 	\end{tabular}
 	}
-	\caption{}
+	\caption{Vorkommende Einzelfehler}
 \end{table}
 
 \subsubsection* {Fehler DMM - Messung}
@@ -191,42 +191,36 @@ Dual cursor accuracy:
 \[
 \Delta U~=~\pm~216~mV~+~0.5~\%~\cdot~7200~mV~=~\pm~252~mV
 \]
-\\
 \noindent \underline{Horizontale Messungenauigkeit:}\\\\
 $\Delta$ Time accuracy:
 \[
-\Delta t~=~\pm(100~ppm~\cdot~34.2~\mu s~+~0.0016~\cdot~5~\mu s~+~0.2~\mu s)
+\Delta t~=~\pm(100~ppm~\cdot~34.2~\mu s~+~0.0016~\cdot~5~\mu s~+~0.2~\mu s)~=~\pm(3.42~ns~+~8~ns+0.2~ns)~=~\pm~11.62~ns
 \]
-\[
-=~\pm(3.42~ns~+~8~ns+0.2~ns)~=~\pm~11.62~ns
-\]
+
 
 \subsubsection* {Fehler Curser}
 \underline{Einstellungenauigkeit der Curser:}\\\\
--horizontal: \(\frac{5~\mu s}{div}\)~=~\(\frac{5~\mu s}{50}\)~=~100 ns\\\\
+-horizontal: \(\frac{5~\mu s}{div}\)~=~\(\frac{5~\mu s}{50}\)~=~100 ns~~~~~~~~~~~~~~
 +vertikal: \(\frac{0.9~V}{div}\)~=~\(\frac{0.9~V}{7.2}\)~=~12.5~mV\\\\
-\underline{Einfluss der vertikalen Messungenauigkeit auf die Messung der Zeitkonstante:}\\\\
+\underline{Einfluss der vertikalen Messungenauigkeit auf die Messung der Zeitkonstante:}\\
 \[
 m\textsubscript{$\tau$}~=~\frac{dU\textsubscript{C}}{dt}~=~\frac{U\textsubscript{0}}{e~\cdot~\tau}~=~\frac{5~V}{e~\cdot~34.2~\mu s}~\approx~53.78~\frac{V}{ms}
 \]
 \[
 \Delta t\textsubscript{v}~=~\frac{252~mV}{53.78~\frac{V}{ms}}~\approx~4.69~\mu s
-\]\\
+\]
 \[
 \Delta t~=~\pm(4.69~+~ 0.01162)~\mu s~\approx~\pm~4.70162~\mu s
-\]\\
+\]
 \underline{Messergebnis:}
 \[
 \tau~=~(34.2~\pm~4.70162)~\mu s~~~~~bzw.~~~~~\tau~=~(34.2~\mu s~\pm~13.75\%)
 \]
 \subsubsection* {Wahrscheinlicher Fehler}
 \[
-\Delta C\textsubscript{wahrsch.}~=~\sqrt{\left(\frac{\Delta \tau}{R}\right)^2~+~\left(\frac{\tau~\cdot~\Delta R}{R^2}\right)^2}
-\]\\
-\[
-\Delta C\textsubscript{wahrsch.}~=~\sqrt{\left(\frac{4.70162~\mu s}{4611~\Omega}\right)^2~+~\left(\frac{34.2~\mu s~\cdot~1.94~\Omega}{(4611~\Omega)^2}\right)^2}~=~\pm~1019.658~ pF
+\Delta C\textsubscript{wahrsch.}=\sqrt{\left(\frac{\Delta \tau}{R}\right)^2+\left(\frac{\tau\cdot\Delta R}{R^2}\right)^2}=\sqrt{\left(\frac{4.70162~\mu s}{4611~\Omega}\right)^2+\left(\frac{34.2~\mu s\cdot1.94~\Omega}{(4611~\Omega)^2}\right)^2}=\pm~1019.658~ pF
 \]
-\subsubsection* {Wahrscheinlicher Fehler-relativ}
+
 \[
 \Delta C\textsubscript{wahrsch.-relativ}~=~\frac{\Delta C\textsubscript{wahrsch.}}{C\textsubscript{x}}~=~\frac{1019.658~pF}{7.337~nF}~=~13.9~\%
 \]
@@ -234,12 +228,9 @@ m\textsubscript{$\tau$}~=~\frac{dU\textsubscript{C}}{dt}~=~\frac{U\textsubscript
 
 \subsubsection* {Größtfehler}
 \[
-\Delta C\textsubscript{max.}~=~\left\lvert \frac{\Delta \tau}{R}\right\rvert~+~\left\lvert \frac{\tau~\cdot~\Delta R}{R^2}\right\rvert
-\]\\
-\[
-\Delta C\textsubscript{max.}~=~\left\lvert \frac{4.70162~\mu s}{4611~\Omega}\right\rvert~+~\left\lvert \frac{34.2~\mu s~\cdot~1.94~\Omega}{(4611~\Omega)^2}\right\rvert~=~1022.774~pF
+\Delta C\textsubscript{max.}~=~\left\lvert \frac{\Delta \tau}{R}\right\rvert+\left\lvert \frac{\tau~\cdot~\Delta R}{R^2}\right\rvert~=~\left\lvert \frac{4.70162~\mu s}{4611~\Omega}\right\rvert+\left\lvert \frac{34.2~\mu s~\cdot~1.94~\Omega}{(4611~\Omega)^2}\right\rvert~=~1022.774~pF
 \]
-\subsubsection* {Größtfehler-relativ}
+
 \[
 \Delta C\textsubscript{max.-relativ}~=~\frac{\Delta C\textsubscript{max.}}{C\textsubscript{x}}~=~\frac{1022.774~pF}{7.337~nF}~=~13.94~\%
 \]
@@ -291,13 +282,12 @@ An dem Verlauf, welcher in Figure 7 zu sehen ist, konnte mithilfe der Curser abg
 
 
 \noindent Das Verhältnis der Widerstände muss gleich dem Verhältnis der Impedanzen der Kondensatoren sein. Mit diesem Wissen konnte die Größe dieses Kondensators wie folgt berechnet werden:
-
 \[
 \frac{C\textsubscript{2}}{C\textsubscript{1}}~=~\frac{R\textsubscript{v}}{R\textsubscript{x}}~=~\frac{4.7~k\Omega}{6.74~k\Omega}~\approx~0.673\]
 
 \[
 C\textsubscript{1}~=~\frac{C\textsubscript{2}}{0.673}~=~\frac{5088.93~pF}{0.673}~\approx~7297.742~pF
-\]\\
+\]
 
 
 
@@ -449,13 +439,13 @@ Größtfehler:\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3979.jpeg}
+    \includegraphics[width=0.65\textwidth]{../Quellen/Labor2/Fotos/IMG_3979.jpeg}
 \caption{Messung R}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3980.jpeg}
+    \includegraphics[width=0.65\textwidth]{../Quellen/Labor2/Fotos/IMG_3980.jpeg}
 \caption{Messung R\textsubscript{V}}
 \end{figure}
 
@@ -495,11 +485,11 @@ mittels der Vierdrahtmethode gemessen werden. Der Fokus liegt darauf, möglichst
 Das Messkonzept basiert auf der Nutzung der Vierdrahtmethode. Sie kann hohe Genauigkeit erzielen, was bei derart kleinen Widerständen, wie der eines Kabels, sehr von Vorteil ist. Im Detail wird der Messaufbau so realisiert, dass zwei separate Strom- und Spannungspfade verwendet werden. Dadurch, dass über die Messleitung kein Strom fließt, fällt dadurch dort nur sehr wenig Spannung ab und sie verfälscht so nicht den Widerstand.\\
 \noindent Ein Multimeter hingegen würde den Messtrom über die Messleitung leiten und die dabei entstehenden Leitungswiderstände mitmessen. Diese parasitären Widerstände führen zu einer Verfälschung des Messergebnisses. \\\\
 \noindent  {\bfseries Netzteil Einstellungen:\par}
-\noindent Am Netzteil leuchtet die Anzeige für C.C (= Constant Current), was bedeutet, dass sich das Gerät im Konstantstrom Modus befindet und über Spannungsanpassungen den Strom konstant hält. Die Strombegrenzung in diesem Modus hat verschiedene Einflüsse:
+\noindent Am Netzteil leuchtet die Anzeige für C.C (= Constant Current), was bedeutet, dass sich das Gerät im Konstantstrom Modus befindet und über Spannungsanpassungen den Strom konstant hält. Eine schlecht gewählt Einstellung der Strombegrenzung kann in diesem Modus verschiedene Effekte haben:
 \begin{itemize}
-\item Zu niedrig: Spannungsabfall zu klein, um vom Messgerät präzise gemssen zu werden. Höhere Ströme erzeugen einen größeren Spannungsabfall, der leichter und genauer zu messen ist, insbesondere bei niederohmigen Widerständen.
-\item Zu hoch: Messtrom erwärmt das Objekt, wodurch der Widerstand steigt und das Ergebnis verfälscht wird.
-\item Zu hoch: Überlastung des Netzerätes, Abschaltung\\
+\item Limit zu niedrig: Spannungsabfall zu klein, um vom Messgerät präzise gemssen zu werden. Höhere Ströme erzeugen einen größeren Spannungsabfall, der leichter und genauer zu messen ist, insbesondere bei niederohmigen Widerständen.
+\item Limit zu hoch: Messtrom erwärmt das Objekt, wodurch der Widerstand steigt und das Ergebnis verfälscht wird.
+\item Limit zu hoch: Überlastung des Netzerätes, Abschaltung\\
 \end{itemize}
 \newpage
 \noindent  {\bfseries Die Grenzen der Strombegrenzung:\par}
@@ -512,18 +502,18 @@ Das Messkonzept basiert auf der Nutzung der Vierdrahtmethode. Sie kann hohe Gena
 	\item Effizienz: Ein zu hoher Strom führt generell zu Energieverlusten.\\
 	\end{itemize}
 \end{itemize}
-\noindent  {\bfseries Aufbau der Messchaltung:\par}
+\noindent  {\bfseries Aufbau der Messschaltung:\par}
 \noindent Um den gesamten Widerstand des Kabels inklusiver seiner Steckverbindungen, wie er bei reellen Nutzungssituationen vorkommt, zu ermitteln, muss die Reihenfolge der Steckverbindungen beachtet werden. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3983.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3983.jpeg}
 \caption{Teil der Steckverbindung nicht berücksichtigt}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../Quellen/Labor2/Fotos/IMG_3982.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_3982.jpeg}
 \caption{Messung über gesamtes Objekt inkl. der ganzen Steckverbindungen}
 \end{figure}
 
@@ -553,7 +543,7 @@ Hersteller erzeugten Grundgesamtheit dar.\\
 \subsection{Bauteile und Messgeräte}
 \begin{itemize}
 \item Fluke 87 V True RMS Multimeter
-\item Widerstandsgurt mit 25 Widerständen
+\item Widerstandsgurt mit 25 Widerständen á 1,2 k$\Omega$
 \end{itemize}
 
 \subsection{Messkonzept}
@@ -562,16 +552,17 @@ Am Fluke Multimeter wird die Widerstandsmessung aktiviert. Es ermöglicht die Me
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{../Quellen/Labor2/Fotos/IMG_4011.jpeg}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Fotos/IMG_4011.jpeg}
 \caption{Messschaltung}
 \end{figure}
 
 \subsection{Messergebnisse}
 \begin{table}[H]
 	\centering
+\scalebox{0.9}{	
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Widerstand Nr. & Wert in kOhm & Widerstand Nr. & Wert in kOhm \\
+		Widerstand Nr. & Wert in k$\Omega$ & Widerstand Nr. & Wert in k$\Omega$ \\
 		\hline
 		1 & 1.183 & 14 & 1.183 \\
 		2 & 1.181 & 15 & 1.180 \\
@@ -588,44 +579,26 @@ Am Fluke Multimeter wird die Widerstandsmessung aktiviert. Es ermöglicht die Me
 		13 & 1.179 & - & - \\
 		\hline
 	\end{tabular}
+}
 	\caption{Einzelne Messungen}
 \end{table}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{../Quellen/Labor2/Histogramm-Widerstände.png}
+    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Histogramm-Widerstände.png}
 \caption{Histogramm}
 \end{figure}
 
+\section*{Berechnung von Mittelwert und Standardabweichung}
+
 Der Mittelwert \( \bar{x} \) wird berechnet als:
 \[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]
-\[
-\bar{x} = \frac{29.582}{25} = 1.1833 \, \text{k}\Omega
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i = \frac{29.582}{25} = 1.1833 \, \text{k}\Omega
 \]
 
 Die empirische Standardabweichung \( s \) wird berechnet als:
 \[
 s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
-\]
-
-\textbf{Berechnung der Abweichungen:}
-\[
-x_i - \bar{x} \quad \text{für jeden Messwert}:
-\]
-Beispiele: 
-\[
-1.183 - 1.1833 = -0.0003, \quad 1.181 - 1.1833 = -0.0023, \quad \dots
-\]
-
-\textbf{Quadratische Abweichungen:}
-\[
-(x_i - \bar{x})^2 \quad \text{für jeden Messwert}:
-\]
-Beispiele:
-\[
-(-0.0003)^2 = 9 \times 10^{-8}, \quad (-0.0023)^2 = 5.29 \times 10^{-6}, \quad \dots
 \]
 
 \textbf{Summe der quadratischen Abweichungen:}
@@ -635,35 +608,47 @@ Beispiele:
 
 \textbf{Einsetzen in die Formel:}
 \[
-s = \sqrt{\frac{0.000192}{25 - 1}} = \sqrt{\frac{0.000192}{24}} = \sqrt{0.000008} = 0.0028 \, \text{k}\Omega
+s = \sqrt{\frac{0.000192}{25 - 1}} = \sqrt{0.000008} = 0.0028 \, \text{k}\Omega
 \]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{../Quellen/Labor2/Histogramm-Widerstände_Mittelwert_Std_Abweichung.png}
+\caption{Histogramm mit Mittelwert und Standardabweichung}
+\end{figure}
+
+\noindent Zusätzlich zum Histogramm wurde die Kernel-Dichteschätzung (KDE) visualisiert, welche die Wahrscheinlichkeitsdichte darstellt. Im Gegensatz zum Histogramm, das die Verteilung durch diskrete Bins darstellt, erzeugt die KDE eine glatte, kontinuierliche Kurve.\\
+
+\noindent Die Herstellertoleranz beträgt 5\% des Nominalwerts von \( 1.2 \, \text{k}\Omega \):
+\[
+\text{Toleranz} = \pm 0.05 \cdot 1.2 \, \text{k}\Omega = \pm 0.060 \, \text{k}\Omega
+\]
+
+\noindent Der Faktor zwischen der Toleranz und der empirischen Standardabweichung \( s \) wird berechnet als:
+\[
+\text{Faktor} = \frac{\text{Toleranz}}{s} = \frac{0.060 \, \text{k}\Omega}{0.00267 \, \text{k}\Omega} \approx 22.50
+\]
+
+\noindent Die großzügigen Toleranzen, wie sie von den Herstellern angegeben werden, helfen dabei, dass viele Bauteile innerhalb der spezifizierten Grenzen liegen. Eine großzügige Toleranz erhöht die Produktionsausbeute und senkt die Kosten.
+
+
 \section*{Vergleich der invertierenden und nicht-invertierenden Grundschaltung eines Operationsverstärkers}
 
 \subsection*{1. Allgemeine Spannungsverstärkung}
-\textbf{Invertierende Schaltung:}
-\[
-A_V = -\frac{R_f}{R_{in}}
-\]
-wobei:
+\textbf{Invertierende Schaltung:}~~~~~~\(A_V = -\frac{R_f}{R_{in}}\)
+
+\noindent wobei:
 \begin{itemize}
     \item \( R_f \) der Gegenkopplungswiderstand ist
     \item \( R_{in} \) der Eingangswiderstand ist
 \end{itemize}
 
-\textbf{Nicht-invertierende Schaltung:}
-\[
-A_V = 1 + \frac{R_f}{R_{in}}
-\]
-wobei:
-\begin{itemize}
-    \item \( R_f \) der Gegenkopplungswiderstand ist
-    \item \( R_{in} \) der Widerstand zwischen Masse und dem invertierenden Eingang des Operationsverstärkers
-\end{itemize}
+\noindent \textbf{Nicht-invertierende Schaltung:}~~~~~~\(A_V = 1 + \frac{R_f}{R_{in}}\)
+
 
 \subsection*{2. Relative Verstärkungsänderung}
 Angenommen, der Gegenkopplungswiderstand \( R_f \) wird durch einen Wert \( R_f + \Delta R_f \) ersetzt, wobei \( \Delta R_f \) die Abweichung aufgrund der Toleranz ist.
-
-\textbf{Invertierende Schaltung:}
+\subsubsection*{Invertierende Schaltung:}
 \[
 A_V' = -\frac{R_f + \Delta R_f}{R_{in}}
 \]
@@ -676,7 +661,7 @@ Vereinfachung:
 \frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f}
 \]
 
-\textbf{Nicht-invertierende Schaltung:}
+\subsubsection*{Nicht-invertierende Schaltung:}
 \[
 A_V' = 1 + \frac{R_f + \Delta R_f}{R_{in}}
 \]
@@ -690,80 +675,171 @@ Vereinfachung:
 \]
 
 \subsection*{3. Empfindlichkeit der Schaltungen}
-Die \textbf{invertierende Schaltung} ist proportional zur relativen Änderung \( \frac{\Delta R_f}{R_f} \), was bedeutet, dass die Verstärkungsänderung direkt von der Änderung des Gegenkopplungswiderstands abhängt.
-
-Die \textbf{nicht-invertierende Schaltung} ist weniger empfindlich, da die Verstärkungsänderung durch den Faktor \( 1 + \frac{R_f}{R_{in}} \) abgeschwächt wird.
-
-\textbf{Fazit:} Die invertierende Schaltung reagiert empfindlicher auf Änderungen des Gegenkopplungswiderstands.
+Die \textbf{invertierende Schaltung} ist proportional zur relativen Änderung \( \frac{\Delta R_f}{R_f} \), was bedeutet, dass die Verstärkungsänderung direkt von der Änderung des Gegenkopplungswiderstands abhängt.\\
+\noindent Die \textbf{nicht-invertierende Schaltung} ist weniger empfindlich, da die Verstärkungsänderung durch den Faktor \( 1 + \frac{R_f}{R_{in}} \) abgeschwächt wird.\\
+\noindent \textbf{Fazit:} Die invertierende Schaltung reagiert empfindlicher auf Änderungen des Gegenkopplungswiderstands.
 
 \subsection*{4. Zahlenbeispiel}
 Gegeben:
-\begin{itemize}
-    \item \( R_f = 10 \, \text{k}\Omega \)
-    \item \( R_{in} = 1 \, \text{k}\Omega \)
-    \item Toleranz \( \Delta R_f = 5\% \), also \( \Delta R_f = 0,05 \times 10 \, \text{k}\Omega = 0,5 \, \text{k}\Omega \)
-\end{itemize}
+\[
+ R_f = 10 \, \text{k}\Omega~~~~~~~~~~R_{in} = 1 \, \text{k}\Omega~~~~~~~~~~Toleranz~\Delta R_f = 5\%,~ also~\Delta R_f = 0,05 \times 10 \, \text{k}\Omega = 0,5 \, \text{k}\Omega
+\]
 
-\textbf{Invertierende Schaltung:}
+
+\subsubsection*{Invertierende Schaltung:}
 \[
 \frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f} = \frac{0,5}{10} = 0,05 \quad \text{(5\% relative Änderung)}
 \]
 
-\textbf{Nicht-invertierende Schaltung:}
+\subsubsection*{Nicht-invertierende Schaltung:}
 \[
 \frac{\Delta A_V}{A_V} = \frac{\frac{\Delta R_f}{R_{in}}}{1 + \frac{R_f}{R_{in}}} = \frac{\frac{0,5}{1}}{1 + \frac{10}{1}} = \frac{0,5}{11} \approx 0,0455 \quad \text{(4,55\% relative Änderung)}
 \]
 
-\noindent Hier zeigt sich, dass die nicht-invertierende Schaltung eine geringere relative Verstärkungsänderung aufweist.
+\noindent Die Resultate von Änderungen des Gegenkopplungswiderstands weisen auf, dass die nicht-invertierende Schaltung gegenüber der invertierende Schaltung um fast 10\% weniger empfindlich ist. 
 
 
+
+\newpage
 \section{Versuch 6: Aktiver Tiefpass erster Ordnung}
 \subsection{Zielsetzung}
-Bestimmung der frequenzabhängigen Verstärkung eines aktiven Tiefpasses
 
+Die Zielsetzung des Versuches ist es, die frequenzabhängige Verstärkung eines aktiven Tiefpasses zu bestimmen. Dabei soll die Charakteristik des Filters analysiert und der Frequenzgang vermessen werden. Der Fokus liegt darauf, den Zusammenhang zwischen der Verstärkung und der Frequenz des Eingangssignals zu ermitteln und die Grenzfrequenz des Filters zu bestimmen.
 \subsection{Bauteile und Messgeräte}
 \begin{itemize}
+
 \item Netzgerät (NEP-8323)
 \item Fluke 87 V True RMS Multimeter
 \item Keysight Oszilloskop (DSOX1102A)
 \item Bananenkabel (mehrere: rot, blau, schwarz)
-\item Sicherheits-Klemmprüfspitze (2 Stück)
-\item Oszilloskop BNC Tastkopf mit Messeklemme
+\item Oszilloskop BNC Tastkopf mit Messklemme
 \item Steckkabel (mehrere: im Idealfall verschiedene Farben)
-\item Steckbrett\\
+\item Steckbrett
+\item Gegenkopplungs-Kondensator 10 µF "Tantalum"
+\item Widerstände:
+\[
+ R_{1} = 1 \, \text{k}\Omega~~~~~~~R_{2} = 10 \, \text{k}\Omega~~~~~~~R = 1 \, \text{k}\Omega
+\]
 \end{itemize}
+\subsection{Theorie hinter der Schaltung}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Versuch 6/Schaltungsplan.png}
+\caption{Schaltskizze}
+\end{figure}
+In Figure 17 ist die Schaltskizze eines aktiven Tiefpasses zu sehen. Der Widerstand R stellt in dieser Schaltung sicher, dass ein definierter Gleichstrompfad für den Eingangsstrom des Operationsverstärkers vorhanden ist, sodass sich keine statische Ladung am nicht-invertierenden Eingang aufbauen kann. Ohne diesen Widerstand könnte es zu einer ungewollten Verschiebung des Arbeitspunktes kommen, was die Funktion der Schaltung beeinträchtigen würde. Eine weitere Aufgabe dieses Widerstandes ist es, Offset-Fehler zu reduzieren. Operationsverstärker weisen geringe Eingangsoffsetströme auf. Diese, durch Ströme verursachten, Spannungsunterschiede werden vom Widerstand R ausgeglichen, was die Genauigkeit der Schaltung verbessern kann.\\
+Die Bemessung von R erfolgt in der Regel, dass sein Wert dem Wert des Ersatzwiderstands am invertierenden Eingang entspricht, also: \(
+R \approx R_2 \parallel R_1\).\\
+Dieser Wert stellt eine Balance her, sodass die Offsetspannung kompensiert wird, und trägt zu einer symmetrischen Belastung bei beiden Eingängen bei.\\
+In der Wechselstromanalyse des Tiefpassfilters beeinflusst $R$ den Frequenzgang der Schaltung kaum, da er in der Regel sehr hoch im Vergleich zu den relevanten Impedanzen (z. B. dem Gegenkopplungsnetzwerk) dimensioniert ist. Da $R$ also nur den Gleichstrompfad definiert und keine wesentliche Rolle für die Signalverstärkung oder -dämpfung spielt, wird er in der Wechselstromanalyse der Schaltung meist vernachlässigt.
 
+\noindent \textbf{Berechnung des Widerstandes R:}
+\[
+R = R_2 \parallel R_1 = \frac{R_2 \cdot R_1}{R_2 + R_1}~=~\frac{10 \, \text{k}\Omega \cdot 1 \, \text{k}\Omega}{10 \, \text{k}\Omega + 1 \, \text{k}\Omega} = \frac{10 \, \text{k}\Omega}{11} \approx 0{,}91 \, \text{k}\Omega
+\]
+In dieser Schaltung erfüllt der Kondensator $C$ die Funktion einer frequenzabhängigen Rückkopplung und bildet zusammen mit den Widerständen einen Tiefpassfilter in der Gegenkopplung des Operationsverstärkers.\\
+\noindent Funktionsweise der Rückkopplung:
+\begin{itemize}
+\item Bei niedrigen Frequenzen: Der Kondensator hat einen hohen kapazitiven Widerstand (Impedanz), wodurch nur ein geringer Anteil des Signals rückgekoppelt wird. Die Verstärkung bleibt relativ hoch.
+\item Bei höheren Frequenzen: Der kapazitive Widerstand des Kondensators nimmt ab, wodurch mehr Signal rückgekoppelt wird. Diese Rückkopplung reduziert die Verstärkung des Operationsverstärkers bei höheren Frequenzen, sodass der Ausgang des Tiefpassfilters das Signal nur für niedrige Frequenzen durchlässt und hohe Frequenzen dämpft.
+\end{itemize}
+\noindent Der Widerstand $R_2$ erfüllt eine wichtige Rolle in der \textbf{Bestimmung der Grenzfrequenz} und der \textbf{Einstellung der Verstärkung} des aktiven Tiefpasses.
 
 \begin{itemize}
-\item A/D Converter - ADC080x
-\item 10 Segment LED-Bar - OSX10201-B
-\newpage
-\item Kondensatoren: 
-	\begin{itemize}
-	\item 10 µF "Tantalum"
-	\item 0,1 µF (2 Stück)
-	\item 150 pF
-	\end{itemize}
-\item Widerstände: 
-	\begin{itemize}
-	\item 1k$\Omega$
-	\item 10k$\Omega$
-	\item 8 x 1 k$\Omega$ Widerstandsnetzwerk
-	\end{itemize}
+    \item \textbf{Bestimmung der Grenzfrequenz:} $R_2$ und $C$ bilden ein RC-Netzwerk, das die Grenzfrequenz des Filters definiert. Die Grenzfrequenz $f_c$ des Tiefpassfilters ergibt sich aus:
+    \[
+    f_c = \frac{1}{2 \pi R_2 C}
+    \]
 \end{itemize}
 
+
+
+
+
 \subsection{Messkonzept}
-...
+Das Messkonzept basiert auf der Analyse der Schaltung eines aktiven Tiefpasses erster Ordnung, bestehend aus einem Operationsverstärker (OpAmp), Widerständen und einem Kondensator. Der Aufbau der Schaltung wird gemäß einer gegebenen Schaltskizze realisiert, und die Bauteile sind so dimensioniert, dass eine charakteristische Tiefpassfunktion entsteht.\\
+
+\noindent \underline{Vorgehensweise:}\\
+\noindent Die Schaltung wird auf einem Steckbrett (siehe Figure 18) aufgebaut, wobei der Operationsverstärker die Verstärkungs- und Filterfunktion übernimmt.
+Ein Funktionsgenerator erzeugt Sinussignale mit unterschiedlichen Frequenzen, die als Eingangssignale an den Tiefpass angelegt werden.
+Die Ausgangsspannung wird bei verschiedenen Frequenzen mit einem Oszilloskop gemessen, und die Verstärkung AV wird für jede Frequenz berechnet.
+Der Frequenzbereich wird im 1:2:5-Muster durchlaufen, und im Bereich um die Grenzfrequenz wird die Frequenz besonders fein aufgelöst, um genaue Messdaten zu erhalten. Für diese Messreihe wurde als Signalform ein Sinussignal eingestellt. Die Messergebnisse sind in Table 5 aufgeführt.
+Der gemessene Frequenzgang wird in einem doppelt-logarithmischen Diagramm dargestellt, um die Grenzfrequenz und die Charakteristik des Filters zu veranschaulichen.\\
+
+\noindent \underline{Erwartungshaltung:}\\
+\noindent Die Verstärkung sollte im niedrigen Frequenzbereich annähernd konstant sein und bei höheren Frequenzen abnehmen.
+Die Grenzfrequenz fc, bei der die Verstärkung auf den Wert des Maximalwerts sinkt, wird ermittelt und im Diagramm dargestellt.
 
 \begin{figure}[H]
     \centering
- %   \includegraphics[]{}
-\caption{...}
+    \includegraphics[width=0.68\textwidth]{../Quellen/Labor2/Fotos/IMG_4023.jpeg}
+\caption{Schaltungsaufbau}
 \end{figure}
-
+\noindent Die Funktion \(A\textsubscript{V}~=~\frac{u\textsubscript{a}}{u\textsubscript{e}}\) kann folgendermaßen als Funktion der Sinus-Signalfrequenz abgeleitet werden:
+\[
+Z\textsubscript{parallel}~=~\frac{1}{\frac{1}{Z\textsubscript{R\textsubscript{2}}}~+~\frac{1}{Z\textsubscript{C}}}~~~~~~~~~~Z\textsubscript{C}~=~\frac{1}{j\omega C}~~~~~~~~~~Z\textsubscript{R\textsubscript{2}}~=~R\textsubscript{2}
+\]
+\[
+Z\textsubscript{parallel}~=~\frac{1}{\frac{1}{R\textsubscript{2}}~+~j\omega C}~=~\frac{R\textsubscript{2}}{1~+~j\omega CR\textsubscript{2}}
+\]
+\[
+A\textsubscript{V}~=~\frac{u\textsubscript{a}}{u\textsubscript{e}}~=~-\frac{Z\textsubscript{parallel}}{R_1}~=~-\frac{R_2}{R_1}~\cdot~\frac{1}{1~+~j\omega CR\textsubscript{2}}
+\]
+\noindent Für den reellen Betrag von \(\left\lvert A\textsubscript{V}\right\rvert~=~\sqrt{A\textsubscript{V}~\cdot~(A\textsubscript{V})^*}\) gilt:
+\[
+\left\lvert A\textsubscript{V}\right\rvert~=~\sqrt{-\frac{R_2}{R_1}~\cdot~\frac{1}{1~+~j\omega CR\textsubscript{2}}~\cdot~-\frac{R_2}{R_1}~\cdot~\frac{1}{1~+~(-j)\omega CR\textsubscript{2}}}~=~\frac{R_2}{R_1}\cdot\frac{1}{\sqrt{1+(2\pi f\textsubscript{c} CR_2)^2}}
+\]
+\noindent Die Grenzfrequenz \(f\textsubscript{c}\) lässt sich durch \(f_c = \frac{1}{2 \pi R_2 C}\) berechnen.
+\[
+f\textsubscript{c}~=~\frac{1}{2 \pi~\cdot~10~k\Omega~\cdot~10~nF}~\approx~1.592~kHz
+\]
 
 \subsection{Messergebnisse}
-...
+\begin{table}[H]
+	\centering
+\scalebox{0.95}{	
+	\begin{tabular}{|c|c|}
+		\hline
+		Frequenz f\textsubscript{c} in Hz & Amplitude in V \\
+		\hline
+		100 & 9.475 \\
+		200 & 9.4 \\
+		500 & 9.05 \\
+		1000 & 7.975 \\
+		2000 & 5.838 \\
+		5000 & 2.894 \\
+		10 000 & 1.545 \\
+		20 000 & 0.825 \\
+		50 000 & 0.338 \\
+		100 000 & 0.241 \\
+		\hline
+	\end{tabular}
+}
+	\caption{Frequenzgang des aktiven Tiefpasses}
+\end{table}
+Bei einer Frequenz von 16 100 Hz bzw. beim Übereinanderlegen der Signale bei 17 300~Hz erreicht die Verstärkung den Wert 1. Diese Frequenz wird Transitfrequenz genannt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,13 +847,8 @@ Bestimmung der frequenzabhängigen Verstärkung eines aktiven Tiefpasses
 \section{Diskussion}
 Was würden Sie nächstes Mal anders machen? Was hat besondere Schwierigkeiten bereitet?\\
 
-- Zielsetzungen!\\
-
-- Tabelle Nr. 1e noch  bearbeiten?\\
-- Nr 1f)\\
-- Hinweise und Zsatzfragen beachten und miteinbauen\\
-
-- Nr. 3b 
+- Nr. 3 eine Frage in rot\\
+-Versuch 6 c) fertigmachen, d),e)g)
 
 
 \end{document}
