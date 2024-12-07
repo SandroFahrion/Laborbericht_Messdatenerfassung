@@ -143,7 +143,7 @@ C\textsubscript{x2}~\approx~ 7.575~nF
 \]
 
 \noindent Bei Addition der Toleranz, ergibt die Rechnung nur knappe 94~\% der, mit dem gemessenen Widerstand errechneten, Kapazität, also 6~\% und 476~$\mu F$ weniger. Wird die Toleranz subtrahiert, ergeben sich 103~\% der Kapazität und damit 3~\% und 238~$\mu F$ mehr.
-\textcolor{red}{Hat dies einen Einfluss auf die Genauigkeit des Ergebnisses von Cx und auf seinen Gesamtfehler, und wenn ja, welchen?}
+Diese Fehler beeinflussen den Gesamtfehler von \(C\textsubscript{x}\) zwar, die Änderung bewegt sich jedoch innerhalb von 1\%.
 
 \begin{table}[H]
 	\centering
@@ -464,8 +464,9 @@ Größtfehler:\\
 	\end{tabular}
 	\caption{Nachmessung der Widerstände}
 \end{table}
-Begründen Sie aus den Betrachtungen der Fehlerrechnung, welches der beiden Verfahren b) oder c) 
-eine genauere Bestimmung der Leistung ergibt.!!!!
+Anhand der Fehlerrechnungen, lässt sich bestimmen, welche Strommessung (direkt oder indirekt) eine genauere Leistung liefert. Bei Betrachtung der wahrscheinlichen Fehler, ergibt die indirekte Strommessung eine genauere Leistung mit einem Fehler von 1.59~$\%$ statt 2.1~$\%$ bei der direkten Strommessung. Anders ist es beim Größtfehler. Dort ergibt die direkte Strommessung eine genauere Leistung mit einem Fehler von 2.1~$\%$ statt 2.6~$\%$ bei indirekter Strommessung.
+
+
 
 
 \newpage
@@ -556,11 +557,17 @@ Am Fluke Multimeter wird die Widerstandsmessung aktiviert. Es ermöglicht die Me
 \caption{Messschaltung}
 \end{figure}
 
+\newpage
 \subsection{Messergebnisse}
-\begin{table}[H]
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}[t]{0.45\textwidth} % Breite für die Tabelle
 	\centering
-\scalebox{0.9}{	
-	\begin{tabular}{|c|c|c|c|}
+        \vspace{0pt} % Wichtig, um eine konsistente Ausrichtung zu gewährleisten
+\scalebox{0.7}{
+        \begin{tabular}{|c|c|c|c|}
 		\hline
 		Widerstand Nr. & Wert in k$\Omega$ & Widerstand Nr. & Wert in k$\Omega$ \\
 		\hline
@@ -580,14 +587,24 @@ Am Fluke Multimeter wird die Widerstandsmessung aktiviert. Es ermöglicht die Me
 		\hline
 	\end{tabular}
 }
-	\caption{Einzelne Messungen}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{../Quellen/Labor2/Histogramm-Widerstände.png}
-\caption{Histogramm}
+        \captionof{table}{Einzelne Messungen}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth} % Breite für das Bild
+	\centering
+	\vspace{0pt} % Wichtig, um eine konsistente Ausrichtung zu gewährleisten
+        \includegraphics[width=1.13\textwidth]{../Quellen/Labor2/Histogramm-Widerstände.png}
+        \captionof{figure}{Histogramm}
+    \end{minipage}
 \end{figure}
+
+
+
+
+
+
+
+
 
 \section*{Berechnung von Mittelwert und Standardabweichung}
 
@@ -598,22 +615,14 @@ Der Mittelwert \( \bar{x} \) wird berechnet als:
 
 Die empirische Standardabweichung \( s \) wird berechnet als:
 \[
-s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}~~~~~~~~~~\sum_{i=1}^{n} (x_i - \bar{x})^2 = 0.000192~~~~~~\Rightarrow~~~~~~s = \sqrt{\frac{0.000192}{25 - 1}} = 0.0028 \, \text{k}\Omega
 \]
 
-\textbf{Summe der quadratischen Abweichungen:}
-\[
-\sum_{i=1}^{n} (x_i - \bar{x})^2 = 0.000192
-\]
 
-\textbf{Einsetzen in die Formel:}
-\[
-s = \sqrt{\frac{0.000192}{25 - 1}} = \sqrt{0.000008} = 0.0028 \, \text{k}\Omega
-\]
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../Quellen/Labor2/Histogramm-Widerstände_Mittelwert_Std_Abweichung.png}
+    \includegraphics[width=0.85\textwidth]{../Quellen/Labor2/Histogramm-Widerstände_Mittelwert_Std_Abweichung.png}
 \caption{Histogramm mit Mittelwert und Standardabweichung}
 \end{figure}
 
@@ -654,12 +663,9 @@ A_V' = -\frac{R_f + \Delta R_f}{R_{in}}
 \]
 Die relative Verstärkungsänderung \( \frac{\Delta A_V}{A_V} \) ist:
 \[
-\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( -\frac{R_f + \Delta R_f}{R_{in}} \right) - \left( -\frac{R_f}{R_{in}} \right)}{-\frac{R_f}{R_{in}}}
+\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( -\frac{R_f + \Delta R_f}{R_{in}} \right) - \left( -\frac{R_f}{R_{in}} \right)}{-\frac{R_f}{R_{in}}}~~~~~\Rightarrow~~~~~\frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f}
 \]
-Vereinfachung:
-\[
-\frac{\Delta A_V}{A_V} = \frac{\Delta R_f}{R_f}
-\]
+
 
 \subsubsection*{Nicht-invertierende Schaltung:}
 \[
@@ -667,12 +673,9 @@ A_V' = 1 + \frac{R_f + \Delta R_f}{R_{in}}
 \]
 Die relative Verstärkungsänderung \( \frac{\Delta A_V}{A_V} \) ist:
 \[
-\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( 1 + \frac{R_f + \Delta R_f}{R_{in}} \right) - \left( 1 + \frac{R_f}{R_{in}} \right)}{1 + \frac{R_f}{R_{in}}}
+\frac{\Delta A_V}{A_V} = \frac{A_V' - A_V}{A_V} = \frac{\left( 1 + \frac{R_f + \Delta R_f}{R_{in}} \right) - \left( 1 + \frac{R_f}{R_{in}} \right)}{1 + \frac{R_f}{R_{in}}}~~~~~\Rightarrow~~~~~\frac{\Delta A_V}{A_V} = \frac{\frac{\Delta R_f}{R_{in}}}{1 + \frac{R_f}{R_{in}}}
 \]
-Vereinfachung:
-\[
-\frac{\Delta A_V}{A_V} = \frac{\frac{\Delta R_f}{R_{in}}}{1 + \frac{R_f}{R_{in}}}
-\]
+
 
 \subsection*{3. Empfindlichkeit der Schaltungen}
 Die \textbf{invertierende Schaltung} ist proportional zur relativen Änderung \( \frac{\Delta R_f}{R_f} \), was bedeutet, dass die Verstärkungsänderung direkt von der Änderung des Gegenkopplungswiderstands abhängt.\\
@@ -724,7 +727,7 @@ Die Zielsetzung des Versuches ist es, die frequenzabhängige Verstärkung eines 
 \subsection{Theorie hinter der Schaltung}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{../Quellen/Labor2/Versuch 6/Schaltungsplan.png}
+    \includegraphics[width=0.4\textwidth]{../Quellen/Labor2/Versuch 6/Schaltungsplan.png}
 \caption{Schaltskizze}
 \end{figure}
 In Figure 17 ist die Schaltskizze eines aktiven Tiefpasses zu sehen. Der Widerstand R stellt in dieser Schaltung sicher, dass ein definierter Gleichstrompfad für den Eingangsstrom des Operationsverstärkers vorhanden ist, sodass sich keine statische Ladung am nicht-invertierenden Eingang aufbauen kann. Ohne diesen Widerstand könnte es zu einer ungewollten Verschiebung des Arbeitspunktes kommen, was die Funktion der Schaltung beeinträchtigen würde. Eine weitere Aufgabe dieses Widerstandes ist es, Offset-Fehler zu reduzieren. Operationsverstärker weisen geringe Eingangsoffsetströme auf. Diese, durch Ströme verursachten, Spannungsunterschiede werden vom Widerstand R ausgeglichen, was die Genauigkeit der Schaltung verbessern kann.\\
@@ -789,9 +792,19 @@ A\textsubscript{V}~=~\frac{u\textsubscript{a}}{u\textsubscript{e}}~=~-\frac{Z\te
 \[
 \left\lvert A\textsubscript{V}\right\rvert~=~\sqrt{-\frac{R_2}{R_1}~\cdot~\frac{1}{1~+~j\omega CR\textsubscript{2}}~\cdot~-\frac{R_2}{R_1}~\cdot~\frac{1}{1~+~(-j)\omega CR\textsubscript{2}}}~=~\frac{R_2}{R_1}\cdot\frac{1}{\sqrt{1+(2\pi f\textsubscript{c} CR_2)^2}}
 \]
-\noindent Die Grenzfrequenz \(f\textsubscript{c}\) lässt sich durch \(f_c = \frac{1}{2 \pi R_2 C}\) berechnen.
 \[
-f\textsubscript{c}~=~\frac{1}{2 \pi~\cdot~10~k\Omega~\cdot~10~nF}~\approx~1.592~kHz
+=~\frac{R_2}{R_1}\cdot\frac{1}{\sqrt{1+(2\pi \frac{1}{2\pi R_2C} CR_2)^2}}~=~\frac{R_2}{R_1}\cdot\frac{1}{\sqrt{2}}
+\]
+\noindent \(\frac{R_2}{R_1}\) kürzen sich raus und der Kehrwert kann gebildet werden. Folglich gilt:
+\[
+\sqrt{1+(2\pi f\textsubscript{c} CR_2)^2}~=~\sqrt{2}~~~~~\Rightarrow~~~~~1+(2\pi f\textsubscript{c}CR_2)^2~=~2~~~~~\Rightarrow~~~~~(2\pi f\textsubscript{c}CR_2)^2~=~1
+\]
+\[
+C=1~~~~~~~~~~C_2(f)=(2\pi f\textsubscript{c}CR_2)^2~~~~~\Rightarrow~~~~~\left\lvert A\textsubscript{V}\right\rvert~=~C_1 \frac{1}{\sqrt{1+C_2(f)}}
+\]
+\noindent Die Grenzfrequenz \(f\textsubscript{c}\) lässt sich durch \(f_c = \frac{1}{2 \pi R_2 C}\) berechnen und kann anschließend für \(C_2(f)\) eingesetzt werden.
+\[
+f\textsubscript{c}~=~\frac{1}{2 \pi~\cdot~10~k\Omega~\cdot~10~nF}~\approx~1.592~kHz~~~~~~~~~~C_2(f)=100.06~\mu F
 \]
 
 \subsection{Messergebnisse}
@@ -832,23 +845,9 @@ Bei einer Frequenz von 16 100 Hz bzw. beim Übereinanderlegen der Signale bei 17
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 \section{Diskussion}
-Was würden Sie nächstes Mal anders machen? Was hat besondere Schwierigkeiten bereitet?\\
+Die Durchführung der Versuche hat sich an einigen Stellen schwierig gestaltet. Durch die Unterstützung der Betreuer, war es möglich die Aufgabenstellungen dennoch erfolgreich zu erfüllen. Der Umgang mit den Messgeräten konnte vertieft werden und die Bedeutung vom Einfluss der Fehler durch Bauteile und Messgeräte wurde deutlich gemacht. Schwer gefallen ist es die Fehlerrechnungen, insbesondere mit Herleitung der Formeln, im Nachhinein durchzuführen. Diese würden bei einem nächsten Labortermin zeitnah berechnet werden.\\
 
-- Nr. 3 eine Frage in rot\\
--Versuch 6 c) fertigmachen, d),e)g)
 
 
 \end{document}
